@@ -70,3 +70,13 @@ system concept - AI tool prototype
 -   Marketing & Content
 -   Operations & Administration
 -   Customer Support
+
+## Portfolio-to-Capstone Delivery Flow
+
+The learner build sequence is:
+
+1. Portfolio work through modules
+2. Reflection checkpoints
+3. Choose project category
+4. Design personal AI workflow
+5. Capstone build

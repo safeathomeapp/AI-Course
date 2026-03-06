@@ -61,6 +61,13 @@ Learners should be able to:
 Progression model:
 **Use → Integrate → Design**
 
+Program flow for learner outcomes:
+1. Portfolio work through modules
+2. Reflection checkpoints
+3. Choose project category
+4. Design personal AI workflow
+5. Capstone build
+
 ## Non-Negotiable Writing Rules
 
 Any content created in this repository should:
@@ -154,6 +161,7 @@ Before generating or editing content:
 7. Do not make the content feel like marketing copy.
 8. Confirm that session or milestone notes are captured in `docs/Session Notes/`.
 9. If notes were not requested, proactively prompt to add them before closing work.
+10. Ensure content supports the portfolio-to-capstone flow defined in `docs/AI_COURSE_ARCHITECTURE.md`.
 
 ## Priority Order for Content Decisions
 

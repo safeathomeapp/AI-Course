@@ -54,9 +54,11 @@ AI-Course/
 │
 ├── README.md
 ├── PROJECT_CONTEXT.md
+├── CONTRIBUTING.md
 ├── PROMPT_LIBRARY.md
 │
 ├── docs/
+│   ├── AI_COURSE_ARCHITECTURE.md
 │   ├── AI_COURSE_ROADMAP.md
 │   ├── AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md
 │   ├── COURSE_MODULE_TEMPLATE.md
@@ -75,11 +77,22 @@ AI-Course/
 
 The `docs/` directory contains the governing documents for the course:
 
+- `AI_COURSE_ARCHITECTURE.md` — architecture of course delivery and progression flow
 - `AI_COURSE_ROADMAP.md` — overall structure and philosophy
 - `AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md` — how AI should be used throughout the course
 - `COURSE_MODULE_TEMPLATE.md` — standard structure for every module
 - `COURSE_CASE_STUDIES.md` — recurring scenarios used across the course
 - `COURSE_CURRICULUM_MAP.md` — full module map for all three tiers
+
+## Portfolio to Capstone Flow
+
+The program flow is:
+
+1. Portfolio work through modules
+2. Reflection checkpoints
+3. Choose project category
+4. Design personal AI workflow
+5. Capstone build
 
 ## How Modules Should Be Written
 
