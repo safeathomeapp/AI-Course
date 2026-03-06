@@ -87,6 +87,7 @@ The `docs/` directory contains the governing documents for the course:
 - `COURSE_CURRICULUM_MAP.md` — full module map for all three tiers
 - `MODULE_SCAFFOLDER_TEMPLATE.md` — generation scaffold for creating consistent modules
 - `CODEX_MODULE_GENERATION_GUIDE.md` — operating guide for AI-assisted module generation
+- `TEST_PANEL_GUIDELINES.md` — review framework for structured module testing and feedback
 
 ## Portfolio to Capstone Flow
 

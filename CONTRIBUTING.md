@@ -70,6 +70,7 @@ Follow this workflow when adding or modifying material.
    - the curriculum defined in `COURSE_CURRICULUM_MAP.md`
 
 4. Run the **module checklist** before committing.
+   - For panel-tested modules, capture review against `docs/TEST_PANEL_GUIDELINES.md`.
 
 5. Submit a pull request.
 
@@ -239,6 +240,7 @@ AI-Course/
 │   ├── COURSE_CURRICULUM_MAP.md
 │   ├── MODULE_SCAFFOLDER_TEMPLATE.md
 │   ├── CODEX_MODULE_GENERATION_GUIDE.md
+│   ├── TEST_PANEL_GUIDELINES.md
 │   └── Session Notes/
 │
 ├── foundation_course/

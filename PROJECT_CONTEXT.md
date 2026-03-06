@@ -168,6 +168,7 @@ Before generating or editing content:
 9. If notes were not requested, proactively prompt to add them before closing work.
 10. Ensure content supports the portfolio-to-capstone flow defined in `docs/AI_COURSE_ARCHITECTURE.md`.
 11. For module creation, explicitly apply `docs/MODULE_SCAFFOLDER_TEMPLATE.md` and `docs/CODEX_MODULE_GENERATION_GUIDE.md`.
+12. For module review and iteration, apply `docs/TEST_PANEL_GUIDELINES.md`.
 
 ## Priority Order for Content Decisions
 
