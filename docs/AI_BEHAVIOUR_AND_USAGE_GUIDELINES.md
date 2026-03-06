@@ -37,3 +37,11 @@ Understand processes before automating them.
 ### Focus on Systems, Not Tricks
 
 The durable skill is workflow design and structured thinking.
+
+### Session Notes Are Mandatory
+
+Every session and major milestone must be captured in
+`docs/Session Notes/`.
+
+If the user forgets to request notes, proactively prompt to create or
+update them before finalising the session.
