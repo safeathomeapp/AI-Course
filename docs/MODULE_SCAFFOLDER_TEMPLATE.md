@@ -71,6 +71,13 @@ By the end of this module, learners will be able to:
 - [objective 2]
 - [objective 3]
 
+### Teaching Flow and Timing
+
+- [time block 1]
+- [time block 2]
+- [time block 3]
+- [time block 4]
+
 ---
 
 ## 1. Concept Explanation
@@ -100,6 +107,9 @@ Include short examples where useful.
 ### Analysis
 Explain why the improved version works better.
 
+Add a second demonstration from a different recurring case-study domain
+where relevant.
+
 ---
 
 ## 3. Guided Exercise
@@ -117,6 +127,14 @@ Explain why the improved version works better.
 
 ### Example Output
 [Provide a short example answer or outline]
+
+### Evaluation Checklist
+
+- [clarity]
+- [structure]
+- [assumptions]
+- [missing information]
+- [decision usefulness]
 
 ---
 
@@ -200,6 +218,8 @@ Any generated module must:
 - include at least one exercise
 - include a portfolio artefact
 - reinforce that AI is a tool, not an authority
+- include Teaching Flow and Timing in Module Overview
+- include an evaluation checklist in Guided Exercise
 
 ---
 
@@ -212,6 +232,8 @@ A good generated module is:
 - professionally relevant
 - grounded in realistic use cases
 - reusable in self-paced or instructor-led settings
+- substantial enough to function as a teachable lesson (not just an
+  outline)
 
 A bad generated module is:
 

@@ -165,11 +165,13 @@ Every module must include:
 - concept explanation
 - demonstration
 - guided exercise
+- guided exercise evaluation checklist
 - real-world application
 - common mistakes
 - portfolio artefact
 - reflection questions
 - optional advanced exploration
+- teaching flow and timing in module overview
 ```
 
 This is the highest-speed option and the highest-review option.
