@@ -1,24 +1,124 @@
-# AI Course
+# An AI's Guide for Humans: Understanding and Harnessing Artificial Intelligence
 
-This repository contains the structure and core materials for an AI course program.
+This repository contains the working materials for a three-tier AI course series designed to teach people how to understand, use, and implement AI professionally.
 
-## Purpose
+The project is structured to support both self-paced learning and instructor-led delivery. It is designed to be broad enough for general learners in the early stages, while becoming more operational and technical in later stages.
 
-- Organise course content across foundational, applied, and systems-focused modules.
-- Maintain reusable prompts and capstone project resources.
-- Keep planning and governance documents under `docs/`.
+## Project Purpose
+
+The purpose of this repository is to develop a practical, no-nonsense course series that teaches learners how to:
+
+- understand how AI systems behave
+- use AI deliberately rather than casually
+- build repeatable AI-assisted workflows
+- design AI-enabled systems and tools
+- develop portfolio-grade outputs that support career progression
+
+This is not a repository for shallow prompt tricks or generic AI hype. It is a structured course build focused on durable skills.
+
+## Course Structure
+
+The course is split into three independent but connected tiers.
+
+### 1. Foundations of AI
+Approximate duration: 20 hours
+
+Focus:
+- what AI and LLMs actually are
+- how to prompt with structure
+- how to avoid common misuse
+- how to use AI for research, writing, and reasoning
+
+### 2. Applied AI Workflows
+Approximate duration: 20–30 hours
+
+Focus:
+- workflow decomposition
+- prompt chains
+- AI in professional communication and analysis
+- AI-assisted documentation and operating processes
+
+### 3. AI Systems and Architecture
+Approximate duration: 30–40 hours
+
+Focus:
+- retrieval-augmented systems
+- knowledge assistants
+- AI agents and automation concepts
+- system reliability, governance, and implementation
 
 ## Repository Structure
 
-- `docs/` - Roadmap, curriculum map, templates, case studies, and usage guidelines.
-- `docs/Session Notes/` - Session and milestone notes that must be updated after each meaningful work session.
-- `foundation_course/` - Introductory concepts and beginner modules.
-- `applied_course/` - Practical AI workflows and implementation-focused modules.
-- `systems_course/` - Systems design, architecture, and operations content.
-- `prompts/` - Prompt libraries and prompt-engineering resources.
-- `capstones/` - End-to-end capstone project briefs and assets.
+```text
+AI-Course/
+│
+├── README.md
+├── PROJECT_CONTEXT.md
+├── PROMPT_LIBRARY.md
+│
+├── docs/
+│   ├── AI_COURSE_ROADMAP.md
+│   ├── AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md
+│   ├── COURSE_MODULE_TEMPLATE.md
+│   ├── COURSE_CASE_STUDIES.md
+│   ├── COURSE_CURRICULUM_MAP.md
+│   └── Session Notes/
+│
+├── foundation_course/
+├── applied_course/
+├── systems_course/
+├── prompts/
+└── capstones/
+```
 
-## Required Workflow
+## Core Project Documents
 
-- Every session or major milestone must produce a note in `docs/Session Notes/`.
-- If session notes are not explicitly requested, the assistant should still prompt for them before closing work.
+The `docs/` directory contains the governing documents for the course:
+
+- `AI_COURSE_ROADMAP.md` — overall structure and philosophy
+- `AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md` — how AI should be used throughout the course
+- `COURSE_MODULE_TEMPLATE.md` — standard structure for every module
+- `COURSE_CASE_STUDIES.md` — recurring scenarios used across the course
+- `COURSE_CURRICULUM_MAP.md` — full module map for all three tiers
+
+## How Modules Should Be Written
+
+Every module should follow the module template and include:
+
+1. Module overview
+2. Concept explanation
+3. Demonstration
+4. Guided exercise
+5. Real-world application
+6. Common mistakes
+7. Portfolio artefact
+8. Reflection questions
+9. Optional advanced exploration
+
+## Platform Position
+
+This project is platform-neutral.
+
+The course should teach principles that apply across ChatGPT, Claude, Gemini, local models, and future systems. Examples may use specific tools where useful, but the course must not become dependent on one vendor or interface.
+
+## Intended Learner Outcome
+
+Learners completing the full course should be able to:
+
+- work with AI more effectively than average users
+- design reliable AI workflows
+- improve professional output quality and speed
+- use AI as a career amplifier
+- demonstrate tangible portfolio artefacts
+
+## Guidance for AI Tools
+
+If an AI coding or writing tool is operating inside this repository, it should:
+
+- read `PROJECT_CONTEXT.md` before writing anything
+- follow the course philosophy defined in the docs
+- preserve platform neutrality
+- maintain consistency with the existing module template
+- prioritize clarity, structure, and real-world value over novelty
+- ensure every meaningful session or milestone is logged in `docs/Session Notes/`
+- prompt for session notes if the user forgets to request them
