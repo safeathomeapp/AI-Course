@@ -128,6 +128,11 @@ Every module should follow the pattern defined in `docs/COURSE_MODULE_TEMPLATE.m
 8. Reflection Questions
 9. Optional Advanced Exploration
 
+Module generation and scaffolding must also follow:
+
+- `docs/MODULE_SCAFFOLDER_TEMPLATE.md`
+- `docs/CODEX_MODULE_GENERATION_GUIDE.md`
+
 ## What Good Output Looks Like
 
 Good output in this repository is:
@@ -162,6 +167,7 @@ Before generating or editing content:
 8. Confirm that session or milestone notes are captured in `docs/Session Notes/`.
 9. If notes were not requested, proactively prompt to add them before closing work.
 10. Ensure content supports the portfolio-to-capstone flow defined in `docs/AI_COURSE_ARCHITECTURE.md`.
+11. For module creation, explicitly apply `docs/MODULE_SCAFFOLDER_TEMPLATE.md` and `docs/CODEX_MODULE_GENERATION_GUIDE.md`.
 
 ## Priority Order for Content Decisions
 

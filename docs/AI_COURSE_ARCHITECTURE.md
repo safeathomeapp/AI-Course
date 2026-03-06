@@ -22,6 +22,8 @@ progression, and capstone preparation.
 - `AI_COURSE_ROADMAP.md` for strategy and directional outcomes.
 - `COURSE_CURRICULUM_MAP.md` for module-level structure by tier.
 - `COURSE_MODULE_TEMPLATE.md` for standard module composition.
+- `MODULE_SCAFFOLDER_TEMPLATE.md` for generated module scaffolding.
+- `CODEX_MODULE_GENERATION_GUIDE.md` for AI-assisted generation workflow.
 
 ### Reusable Assets
 

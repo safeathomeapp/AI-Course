@@ -64,6 +64,8 @@ AI-Course/
 │   ├── COURSE_MODULE_TEMPLATE.md
 │   ├── COURSE_CASE_STUDIES.md
 │   ├── COURSE_CURRICULUM_MAP.md
+│   ├── MODULE_SCAFFOLDER_TEMPLATE.md
+│   ├── CODEX_MODULE_GENERATION_GUIDE.md
 │   └── Session Notes/
 │
 ├── foundation_course/
@@ -83,6 +85,8 @@ The `docs/` directory contains the governing documents for the course:
 - `COURSE_MODULE_TEMPLATE.md` — standard structure for every module
 - `COURSE_CASE_STUDIES.md` — recurring scenarios used across the course
 - `COURSE_CURRICULUM_MAP.md` — full module map for all three tiers
+- `MODULE_SCAFFOLDER_TEMPLATE.md` — generation scaffold for creating consistent modules
+- `CODEX_MODULE_GENERATION_GUIDE.md` — operating guide for AI-assisted module generation
 
 ## Portfolio to Capstone Flow
 

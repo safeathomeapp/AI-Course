@@ -65,6 +65,8 @@ Follow this workflow when adding or modifying material.
    - `PROJECT_CONTEXT.md`
    - `docs/AI_COURSE_ARCHITECTURE.md`
    - `COURSE_MODULE_TEMPLATE.md`
+   - `docs/MODULE_SCAFFOLDER_TEMPLATE.md` (for module drafting)
+   - `docs/CODEX_MODULE_GENERATION_GUIDE.md` (for AI-assisted generation)
    - the curriculum defined in `COURSE_CURRICULUM_MAP.md`
 
 4. Run the **module checklist** before committing.
@@ -235,6 +237,8 @@ AI-Course/
 │   ├── COURSE_MODULE_TEMPLATE.md
 │   ├── COURSE_CASE_STUDIES.md
 │   ├── COURSE_CURRICULUM_MAP.md
+│   ├── MODULE_SCAFFOLDER_TEMPLATE.md
+│   ├── CODEX_MODULE_GENERATION_GUIDE.md
 │   └── Session Notes/
 │
 ├── foundation_course/
