@@ -56,17 +56,15 @@ This is why instruction quality matters so much. Better instructions do not make
 
 ### Why this tool is suddenly everywhere
 
-AI assistance existed before current language models, but older automation was narrow. You needed specific rules, rigid inputs, and clear process definitions. Modern generative AI lowered the interface barrier by letting users work in natural language.
+AI assistance existed before current language models, but older automation was narrow and rule-heavy.
 
 A useful comparison:
 
-- Pre-LLM automation: deterministic, narrow, rule-based, high setup cost
-- Search engines: retrieve existing documents and links
-- Generative models: synthesize language responses based on learned patterns
+- Pre-LLM automation: deterministic and narrow
+- Search engines: retrieve existing sources
+- Generative models: synthesize draft responses from learned language patterns
 
-Search helps you find information sources. Generative AI helps you draft, summarize, compare, and structure information. These tools overlap, but they are not the same.
-
-Language models became broadly usable when model quality, compute, and interface design combined at scale. The result is practical speed for drafting and analysis, but with persistent reliability limits.
+Generative models became widely useful when model quality, compute, and interface design improved together. The result is faster drafting and analysis, with ongoing reliability limits that still require human review.
 
 ### What AI is strong at
 
@@ -130,6 +128,8 @@ A better pattern is:
 ### Takeaway
 
 The point is not to distrust AI completely. The point is to use it deliberately. AI can increase speed and quality when humans keep control of scope, verification, and final accountability.
+
+The rest of this course focuses on turning this principle into repeatable workflows and reliable professional practices.
 
 ---
 
@@ -202,7 +202,7 @@ Turn one vague prompt from your actual work into a structured prompt, then evalu
 ### Instructions
 1. Write one vague prompt you currently use.
 2. Rewrite it using Role, Context, Task, Constraints, and Output Format.
-3. Run both prompts, then compare outputs using the evaluation checklist below.
+3. Run both prompts in the same AI tool, then compare outputs using the evaluation checklist below.
 
 ### Suggested Structure
 - Role:
@@ -307,6 +307,14 @@ A one-page checklist covering:
 - what must be verified before using output
 - review depth by risk level
 - what requires mandatory human sign-off
+
+Starter template:
+
+1. Task Type
+2. Risk Level (Low / Medium / High)
+3. AI Role (Drafting / Summarizing / Analysis)
+4. Required Human Verification
+5. Final Decision Owner
 
 ### Why It Matters
 This artefact is immediately usable in real work. It demonstrates not just prompting skill, but responsible AI operating discipline.
