@@ -241,14 +241,19 @@ AI-Course/
 │   ├── MODULE_SCAFFOLDER_TEMPLATE.md
 │   ├── CODEX_MODULE_GENERATION_GUIDE.md
 │   ├── TEST_PANEL_GUIDELINES.md
-│   └── Session Notes/
+│   ├── course_assets/
+│   └── session_notes/
 │
-├── foundation_course/
-├── applied_course/
-├── systems_course/
+├── modules/
+│   ├── foundation/
+│   ├── applied/
+│   └── systems/
 │
 ├── prompts/
-└── capstones/
+├── capstones/
+├── analysis/
+├── reviews/
+└── drafts/
 
 ---
 

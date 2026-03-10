@@ -41,7 +41,7 @@ The durable skill is workflow design and structured thinking.
 ### Session Notes Are Mandatory
 
 Every session and major milestone must be captured in
-`docs/Session Notes/`.
+`docs/session_notes/`.
 
 If the user forgets to request notes, proactively prompt to create or
 update them before finalising the session.

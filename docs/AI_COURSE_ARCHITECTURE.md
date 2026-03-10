@@ -25,10 +25,22 @@ progression, and capstone preparation.
 - `MODULE_SCAFFOLDER_TEMPLATE.md` for generated module scaffolding.
 - `CODEX_MODULE_GENERATION_GUIDE.md` for AI-assisted generation workflow.
 
-### Reusable Assets
+### Shared Teaching Assets
 
-- `PROMPT_LIBRARY.md` for canonical reusable prompts.
-- `COURSE_CASE_STUDIES.md` for recurring teaching domains and scenarios.
+Reusable instructional assets are stored in:
+
+docs/course_assets/
+
+These include:
+
+- AI_ARTEFACT_EXAMPLES.md
+- AI_DIAGRAM_LIBRARY.md
+- AI_EXERCISE_LIBRARY.md
+- AI_OUTPUT_COMPARISON_LIBRARY.md
+- AI_WORKED_EXAMPLES.md
+- AI_GLOSSARY.md
+- AI_MENTAL_MODELS_LIBRARY.md
+- ASSET_LIBRARY_INDEX.md
 
 ## Learning and Delivery Flow
 

@@ -54,24 +54,29 @@ AI-Course/
 │
 ├── README.md
 ├── PROJECT_CONTEXT.md
+├── COURSE_INDEX.md
+├── COURSE_PHILOSOPHY.md
 ├── CONTRIBUTING.md
-├── PROMPT_LIBRARY.md
+│
+├── modules/
+│   ├── foundation/
+│   ├── applied/
+│   └── systems/
+│
+├── analysis/
+│   ├── foundation/
+│   ├── applied/
+│   └── systems/
+│
+├── reviews/
 │
 ├── docs/
-│   ├── AI_COURSE_ARCHITECTURE.md
-│   ├── AI_COURSE_ROADMAP.md
-│   ├── AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md
-│   ├── COURSE_MODULE_TEMPLATE.md
-│   ├── COURSE_CASE_STUDIES.md
-│   ├── COURSE_CURRICULUM_MAP.md
-│   ├── MODULE_SCAFFOLDER_TEMPLATE.md
-│   ├── CODEX_MODULE_GENERATION_GUIDE.md
-│   └── Session Notes/
+│   ├── course_assets/
+│   ├── session_notes/
+│   └── (course design documents)
 │
-├── foundation_course/
-├── applied_course/
-├── systems_course/
 ├── prompts/
+├── drafts/
 └── capstones/
 ```
 
@@ -138,5 +143,5 @@ If an AI coding or writing tool is operating inside this repository, it should:
 - preserve platform neutrality
 - maintain consistency with the existing module template
 - prioritize clarity, structure, and real-world value over novelty
-- ensure every meaningful session or milestone is logged in `docs/Session Notes/`
+- ensure every meaningful session or milestone is logged in `docs/session_notes/`
 - prompt for session notes if the user forgets to request them
