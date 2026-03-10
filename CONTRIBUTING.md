@@ -229,7 +229,7 @@ AI-Course/
 ├── README.md
 ├── PROJECT_CONTEXT.md
 ├── CONTRIBUTING.md
-├── PROMPT_LIBRARY.md
+├── prompts/PROMPT_LIBRARY.md
 │
 ├── docs/
 │   ├── AI_COURSE_ARCHITECTURE.md
