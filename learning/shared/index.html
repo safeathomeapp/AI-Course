@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T1M01 — Introduction to AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="brand-block">
+          <p class="eyebrow">AI Course · Foundation</p>
+          <h1 class="module-code">T1M01</h1>
+          <p class="module-title">Introduction to AI</p>
+        </div>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+          🌙 Dark Mode
+        </button>
+
+        <nav class="lesson-nav" aria-label="Module navigation">
+          <a class="nav-link active" href="#overview">Overview</a>
+          <a class="nav-link" href="#objectives">Objectives</a>
+          <a class="nav-link" href="#what-is-ai">What AI Is</a>
+          <a class="nav-link" href="#workflow">How It Works</a>
+          <a class="nav-link" href="#examples">Examples</a>
+          <a class="nav-link" href="#exercise">Exercise</a>
+          <a class="nav-link" href="#application">Workplace Use</a>
+          <a class="nav-link" href="#recap">Recap</a>
+        </nav>
+
+        <div class="progress-card">
+          <p class="progress-label">Progress</p>
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <p class="progress-text" id="progressText">0% complete</p>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="hero-card" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Module 1 · Foundations</p>
+          <h2>AI is a tool for generating drafts, not a substitute for judgement.</h2>
+          <p class="lead">
+            This module introduces the practical mental model for using AI in real work:
+            a human starts the task, provides context, the AI generates a draft, and the
+            human reviews and decides what happens next.
+          </p>
+        </div>
+
+        <div class="hero-grid">
+          <article class="callout callout-key">
+            <p class="callout-label">🧭 Key principle</p>
+            <h3>AI drafts. Humans review. Humans decide.</h3>
+            <p>
+              Use AI to accelerate first-pass work, but keep responsibility, checking,
+              and final decisions with a person.
+            </p>
+          </article>
+
+          <article class="callout callout-warning">
+            <p class="callout-label">⚠ Important boundary</p>
+            <h3>Fast output is not the same as reliable output.</h3>
+            <p>
+              AI can sound confident while still being incomplete, unsuitable, or wrong.
+              That is why review is a required step, not an optional extra.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-card" id="objectives">
+        <div class="section-heading">
+          <p class="section-kicker">Start here</p>
+          <h2>Learning objectives</h2>
+          <p>
+            By the end of this module, a learner should be able to explain AI in practical
+            workplace terms and describe the role of human review in AI-assisted work.
+          </p>
+        </div>
+
+        <div class="panel">
+          <ul class="check-list">
+            <li>Explain what AI is in plain, practical terms</li>
+            <li>Recognise where AI fits into a human-led workflow</li>
+            <li>Understand the difference between generation and decision-making</li>
+            <li>Use a more structured prompt to improve first-pass outputs</li>
+            <li>Identify where human checking is required</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-card" id="what-is-ai">
+        <div class="section-heading">
+          <p class="section-kicker">Core concept</p>
+          <h2>What AI is, in practical terms</h2>
+        </div>
+
+        <div class="two-column">
+          <article class="panel">
+            <p class="panel-label">🤖 What AI does well</p>
+            <h3>It generates drafts and options quickly</h3>
+            <p>
+              AI is good at producing summaries, rewrites, outlines, first drafts,
+              alternative phrasings, and structured outputs when given enough context.
+            </p>
+          </article>
+
+          <article class="panel">
+            <p class="panel-label">🧑 What humans still own</p>
+            <h3>Accuracy, judgement, risk, and final decisions</h3>
+            <p>
+              A person remains responsible for checking whether an output is correct,
+              suitable, complete, safe, and appropriate for the real situation.
+            </p>
+          </article>
+        </div>
+
+        <article class="definition-strip">
+          <div class="definition-item">
+            <p class="definition-label">Plain-language definition</p>
+            <p class="definition-text">
+              AI is a tool that can generate useful outputs from prompts and context,
+              but it does not replace professional responsibility.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-card" id="workflow">
+        <div class="section-heading">
+          <p class="section-kicker">Operating model</p>
+          <h2>The human and AI workflow</h2>
+          <p>
+            The sequence matters. The human initiates the task and sets direction.
+            The AI assists with generation. The human then reviews and decides.
+          </p>
+        </div>
+
+        <div class="concept-diagram" aria-label="Human and AI workflow">
+          <div class="diagram-step human">
+            <span class="diagram-icon" aria-hidden="true">🧑</span>
+            <span class="diagram-label">Prompt</span>
+          </div>
+
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+
+          <div class="diagram-step human">
+            <span class="diagram-icon" aria-hidden="true">🧑</span>
+            <span class="diagram-label">Provide Context</span>
+          </div>
+
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+
+          <div class="diagram-step ai">
+            <span class="diagram-icon" aria-hidden="true">🤖</span>
+            <span class="diagram-label">Generate Draft</span>
+          </div>
+
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+
+          <div class="diagram-step human">
+            <span class="diagram-icon" aria-hidden="true">🧑</span>
+            <span class="diagram-label">Review</span>
+          </div>
+
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+
+          <div class="diagram-step human decision">
+            <span class="diagram-icon" aria-hidden="true">🧑</span>
+            <span class="diagram-label">Decide</span>
+          </div>
+        </div>
+
+        <div class="three-column">
+          <article class="mini-panel">
+            <p class="mini-label">🧑 Human</p>
+            <h3>Sets the task</h3>
+            <p>Defines what needs doing, why it matters, and what constraints apply.</p>
+          </article>
+
+          <article class="mini-panel">
+            <p class="mini-label">🤖 AI</p>
+            <h3>Produces a draft</h3>
+            <p>Generates a first-pass answer based on the prompt and context provided.</p>
+          </article>
+
+          <article class="mini-panel">
+            <p class="mini-label">🧑 Human</p>
+            <h3>Checks and decides</h3>
+            <p>Tests the output against reality, standards, purpose, and risk.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-card" id="examples">
+        <div class="section-heading">
+          <p class="section-kicker">Concept to example</p>
+          <h2>Weak prompt vs improved prompt</h2>
+          <p>
+            Better output usually starts with a better input. A vague request invites a vague result.
+          </p>
+        </div>
+
+        <div class="example-grid">
+          <article class="example-panel">
+            <p class="example-label">Weak prompt</p>
+            <h3>Too little structure</h3>
+            <pre>Write me a professional email.</pre>
+            <p>
+              This leaves the tool guessing about audience, purpose, tone, length, and constraints.
+            </p>
+          </article>
+
+          <article class="example-panel">
+            <p class="example-label">Improved prompt</p>
+            <h3>Clearer task and context</h3>
+            <pre>You are helping me draft a short professional email to a supplier.
+Purpose: request a corrected invoice.
+Tone: polite and direct.
+Constraints: under 120 words, plain English, include a request for confirmation by Friday.</pre>
+            <p>
+              This is far more likely to produce a useful first draft because the task is framed properly.
+            </p>
+          </article>
+        </div>
+
+        <article class="callout callout-neutral">
+          <p class="callout-label">🔍 What changed?</p>
+          <ul class="check-list compact">
+            <li>The task became specific</li>
+            <li>The audience was implied clearly</li>
+            <li>The tone was defined</li>
+            <li>The output length was constrained</li>
+            <li>A measurable success condition was included</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="content-card" id="exercise">
+        <div class="section-heading">
+          <p class="section-kicker">Guided practice</p>
+          <h2>Improve the prompt</h2>
+          <p>
+            Rewrite the vague prompt below so that an AI tool has enough context to generate a better first draft.
+          </p>
+        </div>
+
+        <div class="exercise-card">
+          <div class="exercise-brief">
+            <p class="exercise-label">Exercise brief</p>
+            <p><strong>Starting prompt:</strong> “Summarise this meeting.”</p>
+            <p>
+              Add the information a useful assistant would need, such as audience, purpose,
+              format, and any output constraints.
+            </p>
+          </div>
+
+          <label class="input-label" for="learnerResponse">Your improved prompt</label>
+          <textarea
+            id="learnerResponse"
+            rows="8"
+            placeholder="Example: Summarise this meeting for the project manager. Use bullet points. Include key decisions, open actions, and deadlines. Keep it under 150 words."
+          ></textarea>
+
+          <button class="primary-button" id="toggleChecklist" type="button">
+            Reveal self-check
+          </button>
+
+          <div class="review-checklist hidden" id="reviewChecklist">
+            <p class="panel-label">✅ Self-check</p>
+            <ul class="check-list">
+              <li>Did you state the task clearly?</li>
+              <li>Did you define who the output is for?</li>
+              <li>Did you specify a format?</li>
+              <li>Did you include any limits or priorities?</li>
+              <li>Would a third party understand what “good” looks like from your prompt?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-card" id="application">
+        <div class="section-heading">
+          <p class="section-kicker">Workplace relevance</p>
+          <h2>Where this shows up in real work</h2>
+        </div>
+
+        <div class="two-column">
+          <article class="panel">
+            <p class="panel-label">🤖 Suitable AI tasks</p>
+            <ul class="check-list compact">
+              <li>Drafting a first version of an email</li>
+              <li>Summarising notes into a clearer format</li>
+              <li>Generating headline options or outlines</li>
+              <li>Rewriting text for a different tone</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <p class="panel-label">🧑 Required human checks</p>
+            <ul class="check-list compact">
+              <li>Is it factually correct?</li>
+              <li>Is anything missing?</li>
+              <li>Is the tone appropriate?</li>
+              <li>Does it create any business, legal, or reputational risk?</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="scenario-panel">
+          <p class="panel-label">🧩 Scenario</p>
+          <h3>Client update draft</h3>
+          <p>
+            A team member needs a quick client update based on rough notes. AI can produce
+            a usable first draft fast, but a person still needs to check whether the facts,
+            promises, dates, and tone are correct before anything is sent.
+          </p>
+        </article>
+      </section>
+
+      <section class="content-card" id="recap">
+        <div class="section-heading">
+          <p class="section-kicker">Finish</p>
+          <h2>Key takeaways</h2>
+        </div>
+
+        <div class="recap-grid">
+          <article class="recap-card">
+            <p class="recap-icon">🤖</p>
+            <h3>AI generates</h3>
+            <p>It produces candidate outputs based on the prompt and context it receives.</p>
+          </article>
+
+          <article class="recap-card">
+            <p class="recap-icon">🧑</p>
+            <h3>Humans review</h3>
+            <p>People check for accuracy, omissions, suitability, and practical risk.</p>
+          </article>
+
+          <article class="recap-card">
+            <p class="recap-icon">🧑</p>
+            <h3>Humans decide</h3>
+            <p>The final responsibility stays with the user, not the tool.</p>
+          </article>
+        </div>
+
+        <div class="next-step">
+          <p class="next-step-label">Next step</p>
+          <p>
+            In the next module, this foundation can be extended into better prompting,
+            better context, and more reliable workflow structure.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("main section[id]");
+    const progressFill = document.getElementById("progressFill");
+    const progressText = document.getElementById("progressText");
+    const toggleChecklistButton = document.getElementById("toggleChecklist");
+    const reviewChecklist = document.getElementById("reviewChecklist");
+    const themeToggle = document.getElementById("themeToggle");
+
+    function updateActiveSection() {
+      let currentId = "";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 160 && rect.bottom >= 160) {
+          currentId = section.id;
+        }
+      });
+
+      navLinks.forEach((link) => {
+        const isActive = link.getAttribute("href") === `#${currentId}`;
+        link.classList.toggle("active", isActive);
+      });
+
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? Math.min(100, Math.round((scrollTop / docHeight) * 100)) : 0;
+
+      progressFill.style.width = `${progress}%`;
+      progressText.textContent = `${progress}% complete`;
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("lesson-theme", theme);
+      themeToggle.textContent = theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem("lesson-theme");
+
+      if (savedTheme) {
+        setTheme(savedTheme);
+        return;
+      }
+
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    if (toggleChecklistButton && reviewChecklist) {
+      toggleChecklistButton.addEventListener("click", () => {
+        reviewChecklist.classList.toggle("hidden");
+        toggleChecklistButton.textContent = reviewChecklist.classList.contains("hidden")
+          ? "Reveal self-check"
+          : "Hide self-check";
+      });
+    }
+
+    window.addEventListener("scroll", updateActiveSection);
+    window.addEventListener("load", () => {
+      initTheme();
+      updateActiveSection();
+    });
+  </script>
+</body>
+</html>

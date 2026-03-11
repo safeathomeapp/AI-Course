@@ -1,84 +1,38 @@
-
 # CONTRIBUTING.md
 
 ## Purpose
 
-This file defines the rules and expectations for contributing to the **AI-Course** repository.
+This document defines the workflow and standards for contributing to the AI-Course repository.
 
-This repository is used to build a structured course titled:
+It applies to:
 
-**“An AI's Guide for Humans: Understanding and Harnessing Artificial Intelligence.”**
-
-Contributions may come from:
 - human collaborators
 - instructors
 - subject matter experts
-- AI tools such as Codex, Copilot, or other assistants
+- AI-assisted contributors
 
-The purpose of this document is to ensure that **all contributions remain consistent with the philosophy and architecture of the course.**
-
----
-
-# Core Principles
-
-All contributions must align with the following principles.
-
-### AI is a tool, not an authority
-The course teaches learners how to **use AI deliberately and responsibly**. Contributions should reinforce this idea.
-
-### Practical value over novelty
-Content should prioritize **real-world usefulness**, not clever prompts or gimmicks.
-
-### Structure over improvisation
-All modules must follow the structure defined in:
-
-`docs/COURSE_MODULE_TEMPLATE.md`
-
-### Platform neutrality
-Examples should work across:
-- ChatGPT
-- Claude
-- Gemini
-- local LLMs
-- future models
-
-Avoid writing content that depends heavily on one specific tool unless necessary.
-
-### Career amplification
-Course material should emphasize how AI can:
-- improve professional output
-- reduce repetitive work
-- enhance thinking and decision-making
-- create portfolio‑grade artefacts
+Contributors should use this file alongside the authority documents it depends on.
 
 ---
 
-# Contribution Workflow
+## Authority Documents
 
-Follow this workflow when adding or modifying material.
+Before making substantive changes, contributors should defer to:
 
-1. Create a branch from `main`.
+- `COURSE_PHILOSOPHY.md`
+- `REPOSITORY_MAP.md`
+- `AI_PROJECT_CONTEXT.md`
+- `docs/COURSE_MODULE_TEMPLATE.md`
+- `docs/COURSE_CURRICULUM_MAP.md`
+- `docs/CODEX_MODULE_GENERATION_GUIDE.md` when using AI-assisted module generation
 
-2. Add or modify content in the appropriate folder.
-
-3. Ensure the material follows:
-   - `PROJECT_CONTEXT.md`
-   - `docs/AI_COURSE_ARCHITECTURE.md`
-   - `COURSE_MODULE_TEMPLATE.md`
-   - `docs/MODULE_SCAFFOLDER_TEMPLATE.md` (for module drafting)
-   - `docs/CODEX_MODULE_GENERATION_GUIDE.md` (for AI-assisted generation)
-   - the curriculum defined in `COURSE_CURRICULUM_MAP.md`
-
-4. Run the **module checklist** before committing.
-   - For panel-tested modules, capture review against `docs/TEST_PANEL_GUIDELINES.md`.
-
-5. Submit a pull request.
-
-6. Review changes before merging into `main`.
+These files define the principles, repository boundaries, and module expectations that contributions must respect.
 
 ---
 
-# Writing Standards
+## Core Standard
+
+All contributions must remain consistent with the course philosophy, the repository structure, and the canonical module expectations.
 
 Contributions should be:
 
@@ -92,149 +46,93 @@ Avoid:
 
 - hype about AI replacing humans
 - vague motivational writing
-- overlong theoretical explanations
-- vendor‑specific marketing language
-
-The tone of the course should be **professional, practical, and intellectually honest.**
+- overlong theoretical explanation without practical value
+- vendor-specific marketing language unless explicitly required
 
 ---
 
-# Module Requirements
+## Contribution Workflow
 
-Every module must include the sections defined in:
+Follow this workflow when adding or modifying material:
 
-`docs/COURSE_MODULE_TEMPLATE.md`
-
-Required sections:
-
-1. Module Overview  
-2. Concept Explanation  
-3. Demonstration  
-4. Guided Exercise  
-5. Real‑World Application  
-6. Common Mistakes  
-7. Portfolio Artefact  
-8. Reflection Questions  
-9. Optional Advanced Exploration  
-
-Modules that do not follow this structure should not be merged.
+1. Create a branch from `main`.
+2. Confirm the correct repository layer using `REPOSITORY_MAP.md`.
+3. Read the relevant authority documents before editing.
+4. Add or modify content in the appropriate folder.
+5. For module work, ensure the material aligns with `docs/COURSE_MODULE_TEMPLATE.md` and `docs/COURSE_CURRICULUM_MAP.md`.
+6. For AI-assisted module work, follow `docs/CODEX_MODULE_GENERATION_GUIDE.md`.
+7. For panel-tested modules, capture review using `docs/TEST_PANEL_GUIDELINES.md`.
+8. Review changes before opening a pull request.
+9. Submit a pull request for review before merging into `main`.
 
 ---
 
-# Use of Recurring Case Studies
+## Writing Standards
 
-Where possible, examples should reference the recurring domains defined in:
+Contributions should reinforce:
+
+- responsible AI use
+- practical learner value
+- clarity over cleverness
+- structure over improvisation
+- professional usefulness over novelty
+
+Where relevant, examples should stay aligned with the recurring domains in:
 
 `docs/COURSE_CASE_STUDIES.md`
 
-These include:
-
-- finance and bookkeeping
-- software development
-- product management
-- marketing and content creation
-- operations and administration
-- customer support
-
-Using these domains consistently improves continuity across the course.
+This helps preserve continuity across the course.
 
 ---
 
-# AI‑Generated Contributions
+## Module Work
 
-AI tools may assist in writing content.
+Modules must follow the canonical structure and teaching expectations defined in:
 
-However:
+`docs/COURSE_MODULE_TEMPLATE.md`
 
-- AI outputs must be reviewed by a human.
-- AI must follow the guidance in `PROJECT_CONTEXT.md`.
-- AI should **not invent new course structures**.
+Contributors should not invent alternate module structures or omit required sections.
 
-AI contributions should prioritize:
-
-- clarity
-- structure
-- usefulness
-- professional relevance
+Portfolio artefacts, demonstrations, exercises, and real-world application sections should remain practically useful, not decorative.
 
 ---
 
-# Portfolio Artefacts
+## AI-Assisted Contributions
 
-Most modules should produce a **portfolio artefact**.
+AI-assisted work is allowed, but contributors remain responsible for quality and alignment.
 
-Examples:
+When AI tools are used:
 
-- prompt libraries
-- workflow diagrams
-- AI‑assisted analysis reports
-- SOP documentation
-- structured summaries
-- decision frameworks
+- outputs must be reviewed by a human
+- repository operating boundaries in `AI_PROJECT_CONTEXT.md` must be respected
+- shared assets in `docs/course_assets/` should be reused where appropriate
+- raw review files in `reviews/` must not be edited
 
-The goal is for learners to finish the course with **tangible outputs demonstrating capability.**
+AI assistance should improve clarity, consistency, and usefulness, not bypass editorial judgment.
 
 ---
 
-# Capstone Project Philosophy
+## Review Standard
 
-The final project for the course will **not be a single rigid assignment**.
+Before a contribution is treated as ready:
 
-Instead, learners will choose from a list of project categories that best fit their professional interests.
+- confirm it belongs in the correct repository layer
+- confirm it does not conflict with the course philosophy
+- confirm it does not duplicate an existing authority or shared asset without reason
+- confirm any module changes remain structurally aligned to the canonical template
+- confirm wording is practical, clear, and instructionally useful
 
-Possible project categories may include:
-
-- AI workflow system
-- research assistant
-- productivity assistant
-- decision support tool
-- knowledge organization system
-- AI‑assisted reporting workflow
-
-Throughout the course, learners will be encouraged to:
-
-- identify problems in their own work
-- experiment with AI workflows
-- collect ideas for a final project
-
-By the time they reach the capstone stage, they should have a **clear direction for a project relevant to their career or interests.**
-
-The capstone should demonstrate:
-
-- understanding of AI behaviour
-- structured prompting
-- workflow design
-- validation of outputs
-- practical real‑world usefulness
-
-## Portfolio to Capstone Flow
-
-All contributors should design modules and artefacts to support this
-fixed progression:
-
-1. Portfolio work through modules
-2. Reflection checkpoints
-3. Choose project category
-4. Design personal AI workflow
-5. Capstone build
+These review standards should not be weakened for speed.
 
 ---
 
-## Repository Structure
+## Final Note
 
-A summary of the repository structure is provided in `REPOSITORY_MAP.md`.
+This repository is intended to produce a serious, useful, and durable course.
 
-Contributors should review that file before creating or modifying files.
-
-# Final Note
-
-This course is intended to be **serious, useful, and durable.**
-
-The goal is not to create another generic AI course, but to build a resource that helps learners genuinely understand and harness AI in their work.
-
-When contributing, prioritize:
+Contributors should optimize for:
 
 1. clarity
 2. structure
 3. usefulness
-4. real‑world relevance
+4. real-world relevance

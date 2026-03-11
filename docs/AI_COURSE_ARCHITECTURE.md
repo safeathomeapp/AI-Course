@@ -1,94 +1,197 @@
 # AI_COURSE_ARCHITECTURE.md
 
-Repository organization is defined in `REPOSITORY_MAP.md`.
-
 ## Purpose
 
-Defines the structural architecture for course delivery, learner
-progression, and capstone preparation.
+This document defines the course design architecture of the AI-Course project.
 
-## Course Layers
+It governs:
 
-### Orientation
+- how the course is structured as a learning system
+- how core teaching documents relate to each other
+- how shared teaching assets support module design
+- how module work should connect to portfolio and capstone outcomes
 
-- `README.md` for repository and course overview.
-- `PROJECT_CONTEXT.md` for AI/editor operating context.
+It does not define repository structure. Repository organization is defined in:
 
-### Governance
+`REPOSITORY_MAP.md`
 
-- `CONTRIBUTING.md` for contribution standards and workflow.
-- `AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md` for AI usage rules.
+---
 
-### Architecture and Planning
+## Architectural Scope
 
-- `AI_COURSE_ROADMAP.md` for strategy and directional outcomes.
-- `COURSE_CURRICULUM_MAP.md` for module-level structure by tier.
-- `COURSE_MODULE_TEMPLATE.md` for standard module composition.
-- `MODULE_SCAFFOLDER_TEMPLATE.md` for generated module scaffolding.
-- `CODEX_MODULE_GENERATION_GUIDE.md` for AI-assisted generation workflow.
+This file sits between philosophy and execution.
 
-### Shared Teaching Assets
+- `COURSE_PHILOSOPHY.md` defines the non-negotiable principles of the course.
+- `docs/COURSE_CURRICULUM_MAP.md` defines the module inventory by tier.
+- `docs/COURSE_MODULE_TEMPLATE.md` defines the canonical shape of a module.
+- `AI_COURSE_ARCHITECTURE.md` defines how those pieces work together as one coherent course system.
 
-Reusable instructional assets are stored in:
+---
 
-docs/course_assets/
+## Course Design Layers
 
-These include:
+The course is designed as a layered learning system.
 
-- AI_ARTEFACT_EXAMPLES.md
-- AI_DIAGRAM_LIBRARY.md
-- AI_EXERCISE_LIBRARY.md
-- AI_OUTPUT_COMPARISON_LIBRARY.md
-- AI_WORKED_EXAMPLES.md
-- AI_GLOSSARY.md
-- AI_MENTAL_MODELS_LIBRARY.md
-- ASSET_LIBRARY_INDEX.md
+### 1. Philosophy Layer
 
-## Learning and Delivery Flow
+Defined by:
 
-The progression model across the program is:
+- `COURSE_PHILOSOPHY.md`
+- `docs/AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md`
 
-1. Portfolio work through modules
-2. Reflection checkpoints
-3. Choose project category
-4. Design personal AI workflow
-5. Capstone build
+This layer establishes the principles the course must consistently reinforce, including:
 
-## Capstone and Portfolio Design Principle
+- AI is a tool, not an authority
+- humans remain accountable
+- verification is required
+- workflow design matters more than prompt tricks
 
-Portfolio artefacts produced throughout modules should feed directly into
-capstone planning and execution.
+### 2. Curriculum Layer
 
-The capstone is the integration point where learners demonstrate:
+Defined by:
 
-- structured prompting
-- workflow design
-- verification and quality control
-- practical professional value
+- `docs/COURSE_CURRICULUM_MAP.md`
 
-## Future Enhancement: Module Metadata Schema
+This layer defines what the course covers across the three tiers:
 
-As the course grows, it may become useful to introduce a structured metadata schema for modules.
+- Foundations
+- Applied Workflows
+- Systems and Architecture
 
-Possible metadata fields could include:
+Its role is scope control and sequencing.
 
-* module_id
-* tier
-* estimated_duration
-* prerequisites
-* learning_objectives
-* assets_used
-* assessment_type
+### 3. Module Design Layer
 
-A metadata schema would support future automation such as:
+Defined by:
 
-* automatic course navigation generation
-* LMS export
-* module dependency mapping
-* learner progress tracking
-* automated learning page generation
+- `docs/COURSE_MODULE_TEMPLATE.md`
+- `docs/MODULE_SCAFFOLDER_TEMPLATE.md`
+- `docs/CODEX_MODULE_GENERATION_GUIDE.md`
 
-This schema is **not currently required** because modules are still being authored manually.
+This layer defines how individual modules are built so that teaching quality and structure remain consistent.
 
-If automation becomes necessary in the future, a `MODULE_METADATA_SCHEMA.md` document should be created in the `docs/` directory to define the structure.
+Each module should reinforce a stable instructional pattern:
 
+- concept explanation
+- demonstration
+- guided exercise
+- real-world application
+- common mistakes
+- portfolio artefact
+- reflection
+
+### 4. Shared Asset Layer
+
+Defined by:
+
+- `docs/course_assets/`
+- `docs/course_assets/ASSET_LIBRARY_INDEX.md`
+
+This layer provides reusable teaching components that can be used across modules instead of being recreated repeatedly.
+
+Key asset types include:
+
+- worked examples
+- diagrams
+- exercise starters
+- output comparisons
+- glossary entries
+- mental models
+- artefact exemplars
+
+### 5. Review and Improvement Layer
+
+Supported by:
+
+- `docs/TEST_PANEL_GUIDELINES.md`
+- `docs/REVIEW_INGESTION_SYSTEM.md`
+- `analysis/`
+
+This layer ensures modules are improved through structured feedback rather than ad hoc rewriting.
+
+---
+
+## Role of Shared Teaching Assets
+
+Shared teaching assets are a core part of the course architecture, not just an efficiency convenience.
+
+They support module design by:
+
+- improving consistency across modules
+- reducing duplicate explanations
+- providing stable learner reference points
+- making revisions easier to propagate across the tier
+- helping AI tools reuse approved instructional materials instead of inventing duplicates
+
+Modules should use shared assets where they improve clarity, scaffolding, or consistency.
+
+Modules should not become dependent on duplicated local versions of assets that already exist in `docs/course_assets/`.
+
+---
+
+## Portfolio-to-Capstone Architecture
+
+The course is designed so that module outputs accumulate toward larger practical outcomes.
+
+The intended progression is:
+
+1. portfolio work through modules
+2. reflection checkpoints
+3. choice of project category
+4. design of a personal AI workflow
+5. capstone build
+
+This means modules are not isolated lessons. They are building blocks in a cumulative learning journey.
+
+Portfolio artefacts produced in modules should therefore:
+
+- be usable outside the lesson itself
+- reinforce responsible AI practice
+- contribute to learner confidence and visible capability
+- prepare learners for larger project-based work
+
+---
+
+## Documentation Architecture
+
+The documentation system should support the course architecture with clear boundaries.
+
+### Root documents
+
+Root documents provide entry points and top-level authority context.
+
+Examples:
+
+- `README.md`
+- `COURSE_PHILOSOPHY.md`
+- `REPOSITORY_MAP.md`
+- `AI_PROJECT_CONTEXT.md`
+
+### `docs/` documents
+
+The `docs/` directory holds deeper architecture, process, template, and reference material.
+
+Examples:
+
+- curriculum map
+- module template
+- generation workflow
+- review system
+- test panel framework
+- shared teaching asset library
+
+This split helps keep root documentation usable while allowing deeper guidance to remain structured and scalable.
+
+---
+
+## Design Principle
+
+The course architecture should always make it easier to preserve the same principles across all tiers:
+
+- clarity before complexity
+- structured workflows over improvisation
+- reusable assets over duplicate teaching materials
+- human review over blind trust
+- practical learner outcomes over abstract coverage
+
+That is the function of this architecture: keeping the course coherent as it grows.

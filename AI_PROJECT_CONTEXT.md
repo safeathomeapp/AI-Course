@@ -1,243 +1,149 @@
-
 # AI_PROJECT_CONTEXT.md
 
 ## Purpose of This File
 
-This document provides **high‑level context for AI systems** interacting with this repository.
+This document provides operational guidance for AI systems working inside this repository.
 
-Its purpose is to allow an AI assistant (ChatGPT, Codex, Claude, etc.) to quickly understand:
+It is not the general project overview and it is not the canonical repository-structure document.
 
-- what this project is
-- how the repository is structured
-- how course materials are organized
-- what files may or may not be modified
-- how review feedback should be processed
+AI tools should use this file to understand:
 
-This file is not primarily for humans; it exists to help AI tools work safely and effectively inside the project.
+- how to behave in this repository
+- which files and layers to treat as authoritative
+- which repository areas are editable versus protected
+- how review and revision work should flow
+
+For broader context, AI tools should defer to:
+
+- `README.md` for project overview
+- `COURSE_PHILOSOPHY.md` for course philosophy
+- `REPOSITORY_MAP.md` for repository structure
+- `docs/AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md` for AI usage principles
 
 ---
 
-# Project Overview
+## Core Operating Principle
 
-Project Name:
-
-**AI-Course — An AI's Guide for Humans: Understanding and Harnessing Artificial Intelligence**
-
-The goal of this repository is to develop a **professional training course** that teaches people how to use AI and LLM tools responsibly and effectively in real work environments.
-
-The course focuses on:
-
-- practical AI usage
-- workflow integration
-- responsible decision-making
-- AI‑assisted systems thinking
-
-Core operating principle:
+The repository follows this principle:
 
 AI drafts. Humans review. Humans decide.
 
----
-
-# Course Structure
-
-The course is divided into three tiers.
-
-## Tier 1 – Foundations
-
-Purpose:
-Teach fundamental understanding of how AI behaves and how to use it safely.
-
-Module IDs:
-
-T1M01 – T1M10
-
-Example:
-
-T1M01_introduction_to_ai.md
-
-Approximate duration: ~20 hours.
+AI systems are collaborators in the workflow, not final decision-makers.
 
 ---
 
-## Tier 2 – Applied Workflows
+## Authority Documents AI Tools Must Defer To
 
-Purpose:
-Teach how AI can be integrated into professional work processes.
+When there is any ambiguity, use these documents as the source of truth:
 
-Module IDs:
+1. `COURSE_PHILOSOPHY.md`
+2. `REPOSITORY_MAP.md`
+3. `docs/AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md`
+4. `docs/COURSE_CURRICULUM_MAP.md`
+5. `docs/COURSE_MODULE_TEMPLATE.md`
+6. `docs/MODULE_SCAFFOLDER_TEMPLATE.md`
 
-T2M01 – T2M10
+Supporting entry documents:
 
-Duration: ~20–30 hours.
-
----
-
-## Tier 3 – Systems and Architecture
-
-Purpose:
-Teach how to design systems and tools that incorporate AI.
-
-Module IDs:
-
-T3M01 – T3M10
-
-Duration: ~30–40 hours.
+- `README.md`
+- `PROJECT_CONTEXT.md`
+- `COURSE_INDEX.md`
 
 ---
 
-# Module Naming Convention
+## Repository Layer Rules
 
-All modules follow the format:
+AI tools must respect the repository layer model defined in `REPOSITORY_MAP.md`.
 
-T[CourseTier]M[ModuleNumber]
+The most important operating boundaries are:
 
-Examples:
-
-T1M01  
-T1M02  
-T2M01  
-T3M05
-
-Example filename:
-
-T1M01_introduction_to_ai.md
-
-This naming system ensures correct sorting and avoids confusion between tiers.
+- `modules/` contains the active curriculum source
+- `learning/` contains learner-facing implementations derived from modules
+- `analysis/` contains review synthesis and revision planning
+- `reviews/` contains raw reviewer feedback and must not be edited
+- `drafts/` contains work-in-progress modules and must not be treated as active curriculum
+- `archive/` contains historical module snapshots and must not be treated as active curriculum
+- `docs/course_assets/` contains reusable teaching assets that should be reused instead of duplicated
 
 ---
 
-# Repository Structure
+## AI Editing Rules
 
-Root folders have specific purposes.
+AI tools operating in this repository should follow these rules:
 
-modules/
-    Contains the **actual course content modules**.
+1. Treat `modules/` as the primary source of curriculum content.
+2. Do not modify files in `reviews/`.
+3. Do not treat `drafts/` as active course modules.
+4. Do not treat `archive/` as active curriculum.
+5. Reuse assets from `docs/course_assets/` whenever possible instead of generating duplicates.
+6. Use `analysis/` outputs to guide revision tasks.
+7. Modify `learning/` only when working on learner-facing implementation.
+8. Do not alter course philosophy without explicit instruction.
+9. Do not rename module IDs without explicit instruction.
 
-modules/foundation/
-modules/applied/
-modules/systems/
+These rules align with:
 
-reviews/
-    Contains **raw feedback from beta testers**.
-
-    These files should NEVER be edited by AI systems.
-
-analysis/
-    Contains **analysis of review feedback**.
-
-    AI tools may summarize reviews and generate insights here.
-
-docs/
-    Contains **course design documentation** such as:
-
-    - curriculum maps
-    - course architecture
-    - module templates
-    - roadmap documents
-
-prompts/
-    Contains prompt templates used throughout the course.
-
-capstones/
-    Contains capstone project descriptions and materials.
-
-drafts/
-    work-in-progress module drafts not yet included in the curriculum
-
-docs/course_assets/
-    shared teaching assets used across multiple modules
-	
-The authoritative repository map is defined in:
-
-REPOSITORY_MAP.md
-	
----
-
-# Development Workflow
-
-Modules are developed through a structured process.
-
-1. Module Draft
-
-Course author writes initial module content.
-
-2. Beta Testing
-
-Testers review the module and provide feedback.
-
-3. Review Collection
-
-Feedback documents are stored in:
-
-reviews/{tier}/{module}/
-
-4. Review Analysis
-
-AI tools summarize feedback and identify patterns.
-
-Output stored in:
-
-analysis/{tier}/{module}/
-
-5. Revision Plan
-
-Improvements are proposed based on feedback.
-
-6. Module Revision
-
-The module is updated.
+- `REPOSITORY_MAP.md`
+- `COURSE_PHILOSOPHY.md`
+- `docs/AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md`
 
 ---
 
-# Rules for AI Systems
+## Development Workflow
 
-AI assistants interacting with this repository should follow these rules.
-AI tools should not treat drafts/ as active course modules.
-AI tools should reuse examples from docs/course_assets/ where appropriate rather than generating new ones.
+Modules are developed through a structured process:
+
+1. Draft or maintain the module source in `modules/` or `drafts/`, depending on maturity.
+2. Collect review feedback in `reviews/{tier}/{module}/`.
+3. Analyze review patterns in `analysis/{tier}/{module}/`.
+4. Create or update a revision plan.
+5. Revise the active module in `modules/`.
+6. Reflect approved curriculum changes in `learning/` when relevant.
+
+AI tools should support this flow without collapsing the boundaries between raw feedback, analysis, source curriculum, and delivery layers.
+
+---
 
 ## AI May
 
 - summarize review feedback
-- identify patterns in tester responses
-- suggest module improvements
-- generate teaching examples
-- assist with documentation updates
+- identify repeated issues and strengths
+- assist with revision planning
+- revise modules using approved analysis outputs
+- update architecture and process documentation
+- help maintain learner-facing delivery files when the task is implementation-focused
 
-## AI Must NOT
+## AI Must Not
 
-- modify files inside the reviews directory
-- delete course modules
-- rename module IDs
-- alter course philosophy without explicit instruction
-
----
-
-# Key Reference Documents
-
-AI tools should read the following files for additional context.
-
-Recommended reading order:
-
-1. README.md
-2. COURSE_INDEX.md
-3. COURSE_PHILOSOPHY.md
-4. PROJECT_CONTEXT.md
-5. docs/COURSE_CURRICULUM_MAP.md
-6. docs/MODULE_SCAFFOLDER_TEMPLATE.md
-
-These files define how the course is structured and how modules should be written.
+- edit raw reviewer feedback in `reviews/`
+- treat drafts or archives as active curriculum unless explicitly instructed
+- bypass human review on curriculum or governance decisions
+- invent duplicate shared assets when a reusable asset already exists
 
 ---
 
-# Final Principle
+## Practical Reading Order for AI Tools
 
-AI tools are collaborators in this project, not authors.
+When starting work in this repository, use this order:
 
-Their role is to assist with:
+1. `README.md`
+2. `COURSE_PHILOSOPHY.md`
+3. `REPOSITORY_MAP.md`
+4. `AI_PROJECT_CONTEXT.md`
+5. `docs/AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md`
 
-analysis,
-synthesis,
-structure,
-and refinement.
+Then read task-specific authority files as needed, for example:
 
-Final editorial and instructional decisions always belong to human course designers.
+- `docs/COURSE_CURRICULUM_MAP.md`
+- `docs/COURSE_MODULE_TEMPLATE.md`
+- `docs/MODULE_SCAFFOLDER_TEMPLATE.md`
+- `docs/REVIEW_INGESTION_SYSTEM.md`
+- `docs/CODEX_MODULE_GENERATION_GUIDE.md`
+
+---
+
+## Final Note
+
+This file defines how AI tools should operate inside the repository.
+
+It should remain operational, concise, and aligned to the authority documents rather than duplicating them.

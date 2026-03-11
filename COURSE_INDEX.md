@@ -1,68 +1,69 @@
 # COURSE_INDEX.md
 
 ## Purpose
-Orientation file for the AI-Course repository.
-Humans and AI tools should read this first to understand project structure.
+
+Quick navigation file for the AI-Course repository.
+
+Use this file to find the right starting document for the task at hand.
+
+This file helps navigate project documentation.
+
+For the course module inventory itself see:
+
+- `docs/COURSE_CURRICULUM_MAP.md`
+---
+
+## Recommended Reading Order
+
+Start here for general orientation:
+
+1. `README.md`
+2. `PROJECT_CONTEXT.md`
+3. `COURSE_PHILOSOPHY.md`
+4. `REPOSITORY_MAP.md`
+
+Then use the relevant authority documents depending on the task:
+
+5. `docs/AI_COURSE_ARCHITECTURE.md`
+6. `docs/COURSE_CURRICULUM_MAP.md`
+7. `docs/COURSE_MODULE_TEMPLATE.md`
+8. `docs/MODULE_SCAFFOLDER_TEMPLATE.md`
 
 ---
 
-# Project Overview
+## Task-Based Navigation
 
-Course Title:
+### Understanding the project
 
-An AI's Guide for Humans: Understanding and Harnessing Artificial Intelligence
+- `README.md`
+- `COURSE_PHILOSOPHY.md`
 
-Core principle:
+### Understanding repository structure
 
-AI drafts. Humans review. Humans decide.
+- `REPOSITORY_MAP.md`
+- `PROJECT_CONTEXT.md`
 
----
+### Working with AI tools in the repo
 
-# Course Tiers
+- `AI_PROJECT_CONTEXT.md`
+- `docs/AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md`
 
-Tier 1 – Foundations (T1M01–T1M10)
+### Writing or revising modules
 
-Tier 2 – Applied Workflows (T2M01–T2M10)
+- `docs/COURSE_CURRICULUM_MAP.md`
+- `docs/COURSE_MODULE_TEMPLATE.md`
+- `docs/MODULE_SCAFFOLDER_TEMPLATE.md`
+- `docs/CODEX_MODULE_GENERATION_GUIDE.md`
+- `docs/course_assets/ASSET_LIBRARY_INDEX.md`
 
-Tier 3 – Systems and Architecture (T3M01–T3M10)
+### Running review and revision workflows
 
----
-
-# Key Documents
-
-Read in this order:
-
-1. PROJECT_CONTEXT.md
-2. COURSE_PHILOSOPHY.md
-3. docs/AI_COURSE_ROADMAP.md
-4. docs/COURSE_CURRICULUM_MAP.md
-5. docs/COURSE_MODULE_TEMPLATE.md
-6. docs/MODULE_SCAFFOLDER_TEMPLATE.md
+- `docs/TEST_PANEL_GUIDELINES.md`
+- `docs/REVIEW_INGESTION_SYSTEM.md`
+- `analysis/README.md`
 
 ---
 
-# Repository Structure
+## Practical Rule
 
-modules/
-    final course modules
-
-analysis/
-    feedback synthesis and revision planning
-
-reviews/
-    raw reviewer feedback (never edited)
-
-docs/
-    course architecture and teaching assets
-
-docs/course_assets/
-    reusable examples, exercises, diagrams, and mental models
-
-prompts/
-    prompt templates used during development
-
-drafts/
-    work-in-progress modules not yet part of the course
-
-capstones/
-    capstone project descriptions
+If a document seems to repeat another document, defer to the more specific authority file rather than the summary file.

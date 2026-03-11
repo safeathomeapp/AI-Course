@@ -264,131 +264,21 @@ The following matrix clarifies where editing normally occurs.
 | prompts   | Yes      | Development workflow prompts     |
 | capstones | Yes      | Project definitions              |
 
-## Editing Governance
-
-The table above defines where edits normally occur. The following rules clarify how repository layers should be used during development.
-
-### Primary Editing Layer
-
-The **`modules/` directory is the authoritative source for curriculum content.**
-
-All instructional improvements should normally begin in `modules/`.
-
-Changes may include:
-
-* improving explanations
-* refining exercises
-* adding examples
-* adjusting lesson flow
-
-### Learning Experience Layer
-
-The `learning/` directory contains the learner-facing HTML implementation.
-
-Edits here typically include:
-
-* layout and presentation
-* styling and UI components
-* JavaScript behaviour
-* interactive exercises
-
-Content changes should normally be made in `modules/` first and then reflected in `learning/`.
-
-### Analysis Layer
-
-The `analysis/` directory contains structured planning artefacts derived from reviewer feedback.
-
-Examples include:
-
-* issue ledgers
-* review syntheses
-* revision strategies
-* shared fixes and asset mapping
-
-These documents guide revisions but are not learner-facing material.
-
-### Raw Review Data
-
-Files stored in `reviews/` must remain **unaltered**.
-
-These documents represent the original reviewer feedback and serve as the input layer for analysis.
-
-### Historical Snapshots
-
-The `archive/` directory contains previous module versions preserved for reference.
-
-Archived files should not be edited.
-
-### Development Drafts
-
-The `drafts/` directory contains early or incomplete modules that are not yet part of the active curriculum.
-
-Once stable, drafts should be moved into `modules/`.
-
-### Asset Libraries
-
-Reusable teaching assets are stored in:
-
-```
-docs/course_assets/
-```
-
-Modules should reference assets from this library rather than duplicating material across modules.
-
-### AI Editing Rules
-
-AI tools operating within this repository should follow these constraints:
-
-1. Treat `modules/` as the primary curriculum source.
-2. Do not modify files in `reviews/`.
-3. Do not modify files in `archive/`.
-4. Modify `learning/` only when working on the learner interface.
-5. Reuse assets from `docs/course_assets/` whenever possible.
-6. Use `analysis/` outputs to guide curriculum revisions.
-7. Do not generate duplicate assets that already exist in `docs/course_assets/`.
-
----
-
-# Guidance for AI Tools
-
-The following operational guidance explains how AI assistants should work within the repository structure.
-AI assistants working in this repository should follow these rules:
-
-* Treat `modules/` as the **primary source of curriculum content**.
-* Do not treat files in `archive/` as active modules.
-* Do not modify files in `reviews/`.
-* Reuse assets from `docs/course_assets/` instead of generating duplicates.
-* Only modify files in `learning/` when working on learner experience implementations.
-* Use `analysis/` outputs to guide revision tasks.
-
----
-
-# Guidance for Contributors
-
-When adding or modifying content:
-
-1. **Edit curriculum in `modules/` first.**
-2. Update `learning/` only after source modules are finalized.
-3. Preserve reviewer feedback in `reviews/` exactly as received.
-4. Store analysis outputs in `analysis/`.
-5. Move earlier module versions to `archive/` when performing major revisions.
-6. Use reusable assets from `docs/course_assets/` whenever possible.
-
 ---
 
 # Relationship to Other Documentation
 
-This file defines the repository structure.
+This file defines repository structure and folder responsibilities.
 
 Other important documents include:
 
 * `README.md` – project overview
-* `COURSE_INDEX.md` – course navigation
-* `PROJECT_CONTEXT.md` – development context
-* `AI_PROJECT_CONTEXT.md` – AI tool behavior guidance
+* `COURSE_INDEX.md` – course navigation and reading order
+* `PROJECT_CONTEXT.md` – quick working context
+* `AI_PROJECT_CONTEXT.md` – AI tool operating guidance
 * `CONTRIBUTING.md` – contributor workflow
 
-These documents may summarize the repository layout, but **this file remains the canonical reference.**
+These documents may summarize the repository layout, but **this file remains the canonical structure reference.**
 
 ---
 
@@ -397,7 +287,7 @@ These documents may summarize the repository layout, but **this file remains the
 The repository is structured to support a clear workflow:
 
 ```
-reviews → analysis → modules → learning experience
+reviews → analysis → modules → learning
 ```
 
 This separation ensures that:

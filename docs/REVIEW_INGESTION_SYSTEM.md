@@ -71,6 +71,8 @@ Use this exact sequence.
 
 ## Stage 1 — Load the Module
 
+Confirm the module ID and tier using docs/COURSE_CURRICULUM_MAP.md.
+
 Before reading any feedback, have the current version of the module available.
 
 You need to know:
@@ -230,6 +232,138 @@ Feedback that will deliberately not be implemented, with a short reason.
 
 ---
 
+# Routing Revision Changes
+
+Not all feedback leads to the same type of change.
+
+Before implementing revisions, determine where the change belongs in the repository.
+
+Use:
+
+`docs/FEEDBACK_CLASSIFICATION_MATRIX.md`
+
+This matrix provides a quick way to classify whether a revision should be handled at module, tier, course, philosophy, or repository-workflow level.
+
+Feedback may affect:
+
+- a single module
+- multiple modules within a tier
+- the overall course design
+- repository governance or workflow
+
+## 1. Module-Level Changes
+
+Feedback affecting only one module should be implemented directly in that module.
+
+Typical examples:
+
+- unclear explanation in one module
+- weak demonstration in one module
+- exercise difficulty in one module
+- terminology confusion within one module
+
+Changes go to:
+
+```text
+modules/{tier}/{module_id}.md
+```
+
+Supporting analysis remains in:
+
+```text
+analysis/{tier}/{module_id}/
+```
+
+Example files:
+
+```text
+analysis/foundation/T1M01/issue_ledger.md
+analysis/foundation/T1M01/revision_plan.md
+```
+
+## 2. Tier-Level Changes
+
+Feedback affecting several modules in the same tier should be recorded as a shared fix.
+
+Typical examples:
+
+- exercises are too difficult across a tier
+- terminology confusion appears across several modules
+- reviewers repeatedly request clearer examples across multiple modules
+
+Record these patterns in:
+
+```text
+analysis/{tier}/T{tier}_SHARED_FIXES.md
+analysis/{tier}/T{tier}_SHARED_ASSETS.md
+```
+
+Affected modules should then be updated individually.
+
+## 3. Course-Wide Instructional Changes
+
+If feedback reveals a pattern affecting the teaching design of many modules, update the canonical module template.
+
+Typical examples:
+
+- demonstrations need visible AI outputs
+- exercises require clearer scaffolding
+- portfolio artefacts require better explanation
+
+Primary document to update:
+
+```text
+docs/COURSE_MODULE_TEMPLATE.md
+```
+
+Modules should then be updated gradually to align with the revised template.
+
+## 4. Philosophy or AI-Use Issues
+
+Rare feedback may reveal confusion about the role of AI itself.
+
+Typical examples:
+
+- learners over-trust AI output
+- learners misunderstand human responsibility
+- learners misuse AI tools in professional contexts
+
+Update:
+
+```text
+COURSE_PHILOSOPHY.md
+docs/AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md
+```
+
+Such changes should be deliberate and infrequent.
+
+## 5. Repository Workflow Issues
+
+If feedback exposes problems with how the project operates, update the relevant process documentation.
+
+Typical examples:
+
+- contributors edit the wrong repository layers
+- the AI generation workflow is unclear
+- review analysis responsibilities are confusing
+
+Possible documents to update:
+
+```text
+CONTRIBUTING.md
+docs/CODEX_MODULE_GENERATION_GUIDE.md
+docs/REVIEW_INGESTION_SYSTEM.md
+REPOSITORY_MAP.md
+```
+
+## Stability Rule
+
+Authority documents should not be changed based on a single module review.
+
+Architecture-level updates should only occur when clear patterns appear across multiple modules or review cycles.
+
+---
+
 # Standard Output Format for Review Analysis
 
 When a module review cycle is complete, the analysis should produce the following sections.
@@ -350,6 +484,6 @@ The purpose of review analysis is not to make everyone happy.
 It is to improve the module in ways that are:
 
 - evidence-based
-- aligned with the course philosophy
+- aligned with the course philosophy and curriculum design
 - supportive of learning
 - sustainable across the whole curriculum

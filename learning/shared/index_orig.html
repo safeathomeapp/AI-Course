@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T1M01 — Introduction to AI</title>
+  <link rel="stylesheet" href="styles_orig.css" />
+</head>
+<body>
+  <div class="lesson-shell">
+    <aside class="lesson-sidebar">
+      <div class="brand-block">
+        <p class="eyebrow">AI Course · Foundation</p>
+        <h1 class="module-code">T1M01</h1>
+        <p class="module-title">Introduction to AI</p>
+		<p><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+  🌙 Dark Mode</button></p>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Module sections">
+        <a href="#overview" class="nav-link active">Overview</a>
+        <a href="#objectives" class="nav-link">Objectives</a>
+        <a href="#concept" class="nav-link">Core Concept</a>
+        <a href="#demo" class="nav-link">Demonstration</a>
+        <a href="#exercise" class="nav-link">Guided Exercise</a>
+        <a href="#application" class="nav-link">Real-World Application</a>
+        <a href="#recap" class="nav-link">Recap</a>
+      </nav>
+
+      <div class="progress-card">
+        <p class="progress-label">Progress</p>
+        <div class="progress-bar" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-text" id="progressText">0% complete</p>
+      </div>
+    </aside>
+
+    <main class="lesson-main">
+      <section class="hero" id="overview">
+        <p class="eyebrow">Module 1 · Foundations</p>
+        <h2>AI is not an authority. It is a tool.</h2>
+        <p class="hero-copy">
+          This module introduces the practical mental model for using AI in real work:
+          prompt, context, generation, review, and decision.
+        </p>
+
+        <div class="hero-grid">
+          <div class="callout callout-key">
+            <h3>Key principle</h3>
+            <p>AI drafts. Humans review. Humans decide.</p>
+          </div>
+
+          <div class="callout callout-warning">
+            <h3>What this module is not</h3>
+            <p>
+              This is not a hype piece and not a deep machine learning lecture.
+              It is a practical operating model for responsible AI use.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="objectives">
+        <div class="section-heading">
+          <p class="section-kicker">Start here</p>
+          <h2>Learning objectives</h2>
+        </div>
+
+        <div class="card">
+          <ul class="check-list">
+            <li>Explain what AI is in practical workplace terms</li>
+            <li>Describe the role of human review in AI-assisted work</li>
+            <li>Recognise the difference between generation and decision-making</li>
+            <li>Use a basic structured interaction pattern with an AI tool</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-section" id="concept">
+        <div class="section-heading">
+          <p class="section-kicker">Core concept</p>
+          <h2>The operating model</h2>
+        </div>
+
+        <div class="concept-diagram">
+          <div class="diagram-step">Prompt</div>
+          <div class="diagram-arrow">→</div>
+          <div class="diagram-step">Context</div>
+          <div class="diagram-arrow">→</div>
+          <div class="diagram-step">Generation</div>
+          <div class="diagram-arrow">→</div>
+          <div class="diagram-step emphasis">Human Review</div>
+          <div class="diagram-arrow">→</div>
+          <div class="diagram-step emphasis">Decision</div>
+        </div>
+
+        <div class="two-column">
+          <div class="card">
+            <h3>What AI does well</h3>
+            <p>
+              Produces drafts, options, summaries, reformulations, and first-pass structure
+              quickly when given enough context.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>What AI does not do</h3>
+            <p>
+              It does not own accountability, understand consequences like a professional,
+              or automatically know what is true, safe, or suitable for the situation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="demo">
+        <div class="section-heading">
+          <p class="section-kicker">Demonstration</p>
+          <h2>Weak prompt vs improved prompt</h2>
+        </div>
+
+        <div class="tab-panel">
+          <div class="tab-buttons" role="tablist" aria-label="Prompt comparison">
+            <button class="tab-button active" data-tab="weak">Weak prompt</button>
+            <button class="tab-button" data-tab="better">Improved prompt</button>
+            <button class="tab-button" data-tab="analysis">Analysis</button>
+          </div>
+
+          <div class="tab-content active" id="tab-weak">
+            <div class="example-block">
+              <h3>Prompt</h3>
+              <pre>Write me a professional email.</pre>
+            </div>
+            <div class="example-block">
+              <h3>Likely result</h3>
+              <p>
+                Generic, vague, and missing the user’s audience, intent, constraints,
+                and desired tone.
+              </p>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-better">
+            <div class="example-block">
+              <h3>Prompt</h3>
+              <pre>You are helping me draft a short professional email to a supplier.
+Purpose: request a corrected invoice.
+Tone: polite and direct.
+Constraints: under 120 words, plain English, include a request for confirmation by Friday.</pre>
+            </div>
+            <div class="example-block">
+              <h3>Likely result</h3>
+              <p>
+                More targeted output because the task, audience, tone, and constraints
+                are specified.
+              </p>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-analysis">
+            <div class="example-block">
+              <h3>What changed?</h3>
+              <ul class="check-list compact">
+                <li>Role and purpose were defined</li>
+                <li>Audience was made explicit</li>
+                <li>Tone and output limits were constrained</li>
+                <li>The request became reviewable</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="exercise">
+        <div class="section-heading">
+          <p class="section-kicker">Guided practice</p>
+          <h2>Improve the prompt</h2>
+        </div>
+
+        <div class="exercise-card">
+          <p class="exercise-label">Exercise brief</p>
+          <p>
+            Take the vague prompt below and rewrite it so an AI tool has enough context
+            to produce a useful first draft.
+          </p>
+
+          <div class="exercise-prompt">
+            <strong>Starting prompt:</strong>
+            <p>“Summarise this meeting.”</p>
+          </div>
+
+          <label for="learnerResponse" class="input-label">Your improved prompt</label>
+          <textarea id="learnerResponse" rows="8" placeholder="Add role, context, audience, output format, and constraints..."></textarea>
+
+          <button id="toggleChecklist" class="primary-button" type="button">
+            Reveal evaluation checklist
+          </button>
+
+          <div class="review-checklist hidden" id="reviewChecklist">
+            <h3>Self-check</h3>
+            <ul class="check-list">
+              <li>Did you state the task clearly?</li>
+              <li>Did you define the audience?</li>
+              <li>Did you include context or source material assumptions?</li>
+              <li>Did you specify a format for the answer?</li>
+              <li>Did you include any limits or priorities?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="application">
+        <div class="section-heading">
+          <p class="section-kicker">Real-world application</p>
+          <h2>Where this shows up at work</h2>
+        </div>
+
+        <div class="scenario-card">
+          <h3>Scenario</h3>
+          <p>
+            A manager asks for a quick first draft of a client update, a summary of notes,
+            and a short action list. AI can accelerate the draft, but a human still needs
+            to check tone, accuracy, omissions, and business risk before sending anything.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section" id="recap">
+        <div class="section-heading">
+          <p class="section-kicker">Finish</p>
+          <h2>Key takeaways</h2>
+        </div>
+
+        <div class="recap-grid">
+          <div class="card">
+            <h3>AI generates</h3>
+            <p>It produces language and structure based on patterns.</p>
+          </div>
+          <div class="card">
+            <h3>Humans review</h3>
+            <p>Professionals check reliability, suitability, and risk.</p>
+          </div>
+          <div class="card">
+            <h3>Humans decide</h3>
+            <p>Responsibility stays with the user, not the tool.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script_orig.js"></script>
+</body>
+</html>

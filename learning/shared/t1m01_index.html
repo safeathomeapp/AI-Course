@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T1M01 — Introduction to AI as a Tool</title>
+  <link rel="stylesheet" href="t1m01_styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="course-sidebar" aria-label="Course navigation sidebar">
+      <div class="sidebar-stack">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+          🌙 Dark mode
+        </button>
+
+        <section class="sidebar-panel sidebar-course-panel">
+          <p class="eyebrow">How to Harness AI · Foundations</p>
+          <h1 class="course-title">Foundation Tier</h1>
+          <p class="course-subtitle">Practical AI literacy and workflow skills for real work.</p>
+        </section>
+
+        <section class="sidebar-panel sidebar-module-panel">
+          <p class="eyebrow">Current module</p>
+          <h2 class="module-code">T1M01</h2>
+          <p class="module-name">Introduction to AI as a Tool</p>
+          <div class="status-pill current">In progress</div>
+        </section>
+
+        <section class="sidebar-panel sidebar-path-panel">
+          <div class="sidebar-heading-row">
+            <div>
+              <p class="eyebrow">Module path</p>
+              <h2 class="sidebar-heading">Foundation modules</h2>
+            </div>
+            <span class="path-count">1 / 4</span>
+          </div>
+
+          <nav class="module-path" aria-label="Foundation module path">
+            <a class="module-chip completed available" href="#overview" data-module="T1M00">
+              <span class="module-chip-code">Intro</span>
+              <span class="module-chip-title">Course orientation</span>
+              <span class="module-chip-state">Available</span>
+            </a>
+
+            <a class="module-chip active" href="#overview" data-module="T1M01" aria-current="page">
+              <span class="module-chip-code">T1M01</span>
+              <span class="module-chip-title">Introduction to AI</span>
+              <span class="module-chip-state">Current</span>
+            </a>
+
+            <button class="module-chip locked" type="button" data-module="T1M02" disabled aria-disabled="true">
+              <span class="module-chip-code">T1M02</span>
+              <span class="module-chip-title">Structured prompting</span>
+              <span class="module-chip-state">Locked</span>
+            </button>
+
+            <button class="module-chip locked" type="button" data-module="T1M03" disabled aria-disabled="true">
+              <span class="module-chip-code">T1M03</span>
+              <span class="module-chip-title">Context and source quality</span>
+              <span class="module-chip-state">Locked</span>
+            </button>
+
+            <button class="module-chip locked" type="button" data-module="T1M04" disabled aria-disabled="true">
+              <span class="module-chip-code">T1M04</span>
+              <span class="module-chip-title">Review and safe use</span>
+              <span class="module-chip-state">Locked</span>
+            </button>
+          </nav>
+        </section>
+
+        <section class="sidebar-panel sidebar-progress-panel">
+          <div class="sidebar-heading-row">
+            <div>
+              <p class="eyebrow">This module</p>
+              <h2 class="sidebar-heading">Progress</h2>
+            </div>
+            <span class="progress-percent" id="progressPercent">0%</span>
+          </div>
+
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+          <p class="progress-copy" id="progressText">Scroll the lesson to update progress.</p>
+
+          <button id="markCompleteButton" class="complete-button" type="button">
+            Mark module complete
+          </button>
+
+          <a id="nextModuleButton" class="next-module-button locked" href="#" aria-disabled="true">
+            Next module locked
+          </a>
+        </section>
+
+        <section class="sidebar-panel sidebar-section-panel">
+          <p class="eyebrow">On this page</p>
+          <nav class="section-nav" aria-label="Module section navigation">
+            <a class="section-link active" href="#overview">Overview</a>
+            <a class="section-link" href="#mental-model">Mental model</a>
+            <a class="section-link" href="#strengths-risks">Strengths and risks</a>
+            <a class="section-link" href="#demonstration">Demonstration</a>
+            <a class="section-link" href="#exercise">Guided exercise</a>
+            <a class="section-link" href="#application">Real-world application</a>
+            <a class="section-link" href="#artefact">Portfolio artefact</a>
+            <a class="section-link" href="#reflection">Reflection</a>
+          </nav>
+        </section>
+      </div>
+    </aside>
+
+    <main class="lesson-main">
+      <section class="hero-card" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Module 1.1 · 60–90 minutes · No prerequisites</p>
+          <h2>AI is a tool, not an authority.</h2>
+          <p class="lead">
+            This module introduces the operating rule for the course: AI drafts. Humans review. Humans decide.
+            The point is not to avoid AI. The point is to use it deliberately, with scope, verification, and final accountability kept by a person.
+          </p>
+        </div>
+
+        <div class="hero-grid">
+          <article class="callout callout-key">
+            <p class="callout-label">🧭 Core operating rule</p>
+            <h3>Use AI for drafting support, not for automatic trust.</h3>
+            <p>
+              Fluent output can still be unsupported, incomplete, or wrong. Review is a required step, especially when an output will affect decisions or downstream work.
+            </p>
+          </article>
+
+          <article class="callout callout-warning">
+            <p class="callout-label">⚠ Why beginners get caught out</p>
+            <h3>Fluency is helpful, but fluency is not evidence.</h3>
+            <p>
+              Models can produce convincing language even when the facts are missing, assumptions are hidden, or the prompt is under-specified.
+            </p>
+          </article>
+        </div>
+
+        <div class="objective-strip">
+          <article class="objective-card">
+            <p class="objective-label">Objective 1</p>
+            <p>Explain why AI should be treated as a tool, not an authority.</p>
+          </article>
+          <article class="objective-card">
+            <p class="objective-label">Objective 2</p>
+            <p>Distinguish useful drafting support from high-risk misuse.</p>
+          </article>
+          <article class="objective-card">
+            <p class="objective-label">Objective 3</p>
+            <p>Apply a practical human-review process before acting on output.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-card" id="mental-model">
+        <div class="section-heading">
+          <p class="section-kicker">Concept explanation</p>
+          <h2>The practical mental model</h2>
+          <p>
+            Use this model whenever you work with AI. It makes the responsibility boundary explicit and stops generated drafts from being mistaken for approved decisions.
+          </p>
+        </div>
+
+        <div class="concept-diagram" aria-label="Human and AI workflow model">
+          <div class="diagram-step human">
+            <span class="diagram-icon" aria-hidden="true">🧑</span>
+            <span class="diagram-label">Prompt</span>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-step human">
+            <span class="diagram-icon" aria-hidden="true">🧑</span>
+            <span class="diagram-label">Provide Context</span>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-step ai">
+            <span class="diagram-icon" aria-hidden="true">🤖</span>
+            <span class="diagram-label">Generation</span>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-step human">
+            <span class="diagram-icon" aria-hidden="true">🧑</span>
+            <span class="diagram-label">Human Review</span>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-step human decision">
+            <span class="diagram-icon" aria-hidden="true">🧑</span>
+            <span class="diagram-label">Decision</span>
+          </div>
+        </div>
+
+        <div class="definition-panel">
+          <article class="definition-card">
+            <p class="panel-label">What the steps mean</p>
+            <ul class="check-list compact">
+              <li><strong>Prompt:</strong> instructions, goals, constraints, and format.</li>
+              <li><strong>Context:</strong> the information that is actually in scope.</li>
+              <li><strong>Generation:</strong> a predicted response based on patterns.</li>
+              <li><strong>Human Review:</strong> check facts, assumptions, and fitness for purpose.</li>
+              <li><strong>Decision:</strong> a person remains accountable for use.</li>
+            </ul>
+          </article>
+
+          <article class="definition-card definition-card-highlight">
+            <p class="panel-label">Key rule</p>
+            <h3>If you skip review, you are delegating authority to a generated draft.</h3>
+            <p>
+              That is the exact behaviour this module is designed to prevent.
+            </p>
+          </article>
+        </div>
+
+        <div class="two-column">
+          <article class="panel">
+            <p class="panel-label">🤖 Why hallucinations happen</p>
+            <p>
+              If a prompt is under-specified, or the required facts are not present in context, the model may still produce a smooth answer by filling gaps with likely language. That can look convincing even when it is unsupported.
+            </p>
+          </article>
+
+          <article class="panel">
+            <p class="panel-label">🧑 Why instructions matter</p>
+            <p>
+              Better instructions do not make AI infallible, but they narrow scope, reduce guessing, and expose uncertainty earlier. That makes outputs easier to review and safer to use.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-card" id="strengths-risks">
+        <div class="section-heading">
+          <p class="section-kicker">Capabilities and limits</p>
+          <h2>What AI is strong at, and what it is weak at</h2>
+        </div>
+
+        <div class="two-column">
+          <article class="panel success-panel">
+            <p class="panel-label">✅ Often strong at</p>
+            <ul class="check-list compact">
+              <li>First-pass drafting</li>
+              <li>Summarising long materials</li>
+              <li>Extracting patterns from provided text</li>
+              <li>Turning unstructured notes into structured formats</li>
+              <li>Generating alternatives for brainstorming or critique</li>
+            </ul>
+          </article>
+
+          <article class="panel warning-panel">
+            <p class="panel-label">⚠ Often weak at</p>
+            <ul class="check-list compact">
+              <li>Guaranteed factual correctness without checks</li>
+              <li>High-stakes policy, legal, or compliance final decisions</li>
+              <li>Understanding unstated organisational context</li>
+              <li>Owning accountability for outcomes</li>
+              <li>Safely operating where the cost of error is high</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="process-compare">
+          <article class="compare-card bad-flow">
+            <p class="panel-label">Common beginner failure pattern</p>
+            <ol>
+              <li>User asks a vague question.</li>
+              <li>AI gives a confident answer.</li>
+              <li>User assumes correctness.</li>
+              <li>Output is used without verification.</li>
+              <li>Error appears later in the workflow.</li>
+            </ol>
+          </article>
+
+          <article class="compare-card good-flow">
+            <p class="panel-label">Better professional pattern</p>
+            <ol>
+              <li>User defines role, context, task, constraints, and format.</li>
+              <li>AI provides a draft with explicit structure.</li>
+              <li>User checks facts, assumptions, and fit for audience.</li>
+              <li>User approves, edits, or rejects.</li>
+              <li>Decision remains human-owned.</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-card" id="demonstration">
+        <div class="section-heading">
+          <p class="section-kicker">Demonstration</p>
+          <h2>Structured prompts create review-ready output</h2>
+          <p>
+            The module demonstration compares a vague prompt with a structured one. The example below also supports role-based variants so learners can switch to examples that fit their own work context.
+          </p>
+        </div>
+
+        <div class="demo-controls" role="tablist" aria-label="Choose an example context">
+          <button class="demo-tab active" type="button" role="tab" aria-selected="true" data-demo="general">General</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo="operations">Operations</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo="finance">Finance</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo="hr">HR</button>
+        </div>
+
+        <div class="demo-panels">
+          <section class="demo-panel active" data-demo-panel="general">
+            <div class="example-grid two-up">
+              <article class="example-card weak">
+                <p class="example-label">Weak prompt</p>
+                <pre>Summarize these notes.</pre>
+                <p>Likely result: a generic narrative summary with hidden unknowns and no clear action structure.</p>
+              </article>
+              <article class="example-card improved">
+                <p class="example-label">Improved prompt</p>
+                <pre>You are a project coordinator.
+Convert these notes into an action log.
+Use columns: Action, Owner, Deadline, Status.
+Mark unknowns as Unassigned.</pre>
+                <p>Likely result: a usable structure, explicit unknowns, and less downstream rework during review.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="demo-panel" data-demo-panel="operations" hidden>
+            <div class="example-grid two-up">
+              <article class="example-card weak">
+                <p class="example-label">Weak prompt</p>
+                <pre>Summarize this meeting.</pre>
+                <p>Likely result: missing owners, missing deadlines, and hidden handoff issues.</p>
+              </article>
+              <article class="example-card improved">
+                <p class="example-label">Improved prompt</p>
+                <pre>Role: Project coordination assistant
+Context: Weekly internal meeting notes covering onboarding delays and handoff issues
+Task: Convert notes into a review-ready action brief
+Constraints: Use only the notes provided; do not invent commitments; mark unknown owners and deadlines as Unassigned
+Output Format: 3-bullet summary, action table, open questions</pre>
+                <p>Likely result: clearer follow-up actions, explicit unknowns, and faster decision readiness.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="demo-panel" data-demo-panel="finance" hidden>
+            <div class="example-grid two-up">
+              <article class="example-card weak">
+                <p class="example-label">Weak prompt</p>
+                <pre>Summarize these KPI notes.</pre>
+                <p>Likely result: a smooth summary that may blur confirmed facts, assumptions, and missing figures.</p>
+              </article>
+              <article class="example-card improved">
+                <p class="example-label">Improved prompt</p>
+                <pre>Role: Finance analyst assistant
+Context: KPI notes from the monthly performance review
+Task: Turn the notes into a fact / unknown summary for management review
+Constraints: Separate confirmed figures from assumptions; do not infer missing numbers; flag review questions explicitly
+Output Format: Confirmed facts, Unknowns, Risks, Review questions</pre>
+                <p>Likely result: facts are separated from gaps, and missing information becomes reviewable instead of hidden.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="demo-panel" data-demo-panel="hr" hidden>
+            <div class="example-grid two-up">
+              <article class="example-card weak">
+                <p class="example-label">Weak prompt</p>
+                <pre>Write a follow-up email after this meeting.</pre>
+                <p>Likely result: a generic email that may invent ownership or sound more certain than the meeting notes support.</p>
+              </article>
+              <article class="example-card improved">
+                <p class="example-label">Improved prompt</p>
+                <pre>Role: Administrative assistant
+Context: This is a follow-up email after an internal project meeting about onboarding delays
+Task: Draft a clear follow-up email with actions and next steps
+Constraints: Do not invent owners or deadlines; mark missing details as unknown
+Output Format: Subject line, email body, action list, open questions</pre>
+                <p>Likely result: clearer communication, explicit unknowns, and an easier line-by-line review before sending.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <article class="callout callout-neutral">
+          <p class="callout-label">🔍 Why the improved version is better</p>
+          <ul class="check-list compact">
+            <li>It narrows scope.</li>
+            <li>It reduces guessing.</li>
+            <li>It makes unknowns visible.</li>
+            <li>It creates structure that is safer to review.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="content-card" id="exercise">
+        <div class="section-heading">
+          <p class="section-kicker">Guided exercise</p>
+          <h2>Turn one vague prompt into a structured prompt</h2>
+          <p>
+            Use the five-part prompt structure from this course: Role, Context, Task, Constraints, and Output Format.
+          </p>
+        </div>
+
+        <div class="exercise-layout">
+          <article class="exercise-card">
+            <p class="panel-label">Readiness check</p>
+            <ul class="check-list compact">
+              <li>You have access to an approved AI tool.</li>
+              <li>You are using non-sensitive practice material.</li>
+              <li>You have 15–20 minutes for one draft, one revision, and one review.</li>
+            </ul>
+          </article>
+
+          <article class="exercise-card">
+            <p class="panel-label">Beginner-safe fallback</p>
+            <p>Rewrite a vague email-drafting prompt using the five-part structure before running both versions in the same AI tool.</p>
+          </article>
+        </div>
+
+        <div class="prompt-structure-grid">
+          <div class="structure-item"><strong>Role</strong><span>Who the AI is helping as</span></div>
+          <div class="structure-item"><strong>Context</strong><span>What information is in scope</span></div>
+          <div class="structure-item"><strong>Task</strong><span>What you want it to do</span></div>
+          <div class="structure-item"><strong>Constraints</strong><span>What it must not do</span></div>
+          <div class="structure-item"><strong>Output Format</strong><span>How the result should be shaped</span></div>
+        </div>
+
+        <div class="exercise-editor">
+          <label class="input-label" for="structuredPrompt">Your structured prompt</label>
+          <textarea id="structuredPrompt" rows="10" placeholder="Role:
+Context:
+Task:
+Constraints:
+Output Format:"></textarea>
+
+          <div class="exercise-actions">
+            <button id="toggleChecklist" class="primary-button" type="button">Reveal evaluation checklist</button>
+            <button id="toggleWorkedExample" class="secondary-button" type="button">Show worked example</button>
+          </div>
+
+          <div class="exercise-drawer hidden" id="reviewChecklist">
+            <p class="panel-label">Evaluation checklist</p>
+            <ul class="check-list compact">
+              <li>Clarity: Is the response easy to understand?</li>
+              <li>Structure: Is the response organised for immediate use?</li>
+              <li>Assumptions: Are assumptions explicit instead of hidden?</li>
+              <li>Missing Information: Does it identify unknowns or gaps?</li>
+              <li>Usefulness for Decision Making: Can a manager act on this safely?</li>
+            </ul>
+            <p class="drawer-footnote">Scoring anchor: 1 = weak/unsafe, 3 = partly usable, 5 = review-ready draft.</p>
+          </div>
+
+          <div class="exercise-drawer hidden" id="workedExampleDrawer">
+            <p class="panel-label">Worked example</p>
+            <p><strong>Vague prompt:</strong> “Write a follow-up email after this meeting.”</p>
+            <p><strong>Structured version:</strong></p>
+            <ul class="check-list compact">
+              <li><strong>Role:</strong> Administrative assistant</li>
+              <li><strong>Context:</strong> Internal project meeting about onboarding delays</li>
+              <li><strong>Task:</strong> Draft a clear follow-up email with actions and next steps</li>
+              <li><strong>Constraints:</strong> Do not invent owners or deadlines; mark missing details as unknown</li>
+              <li><strong>Output Format:</strong> Subject line, email body, action list, open questions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-card" id="application">
+        <div class="section-heading">
+          <p class="section-kicker">Real-world application</p>
+          <h2>Turning rough notes into a decision-support draft</h2>
+        </div>
+
+        <div class="two-column">
+          <article class="scenario-card">
+            <p class="panel-label">Version A · vague prompt</p>
+            <h3>“Summarize this meeting.”</h3>
+            <ul class="check-list compact">
+              <li>Generic narrative summary</li>
+              <li>Missing owners</li>
+              <li>Missing deadlines</li>
+              <li>Hidden unknowns</li>
+            </ul>
+          </article>
+
+          <article class="scenario-card scenario-card-good">
+            <p class="panel-label">Version B · structured prompt</p>
+            <h3>Review-ready action brief</h3>
+            <ul class="check-list compact">
+              <li>Role: Project coordination assistant</li>
+              <li>Context: Weekly internal meeting notes covering onboarding delays and handoff issues</li>
+              <li>Task: Convert notes into a review-ready action brief</li>
+              <li>Constraints: Use only the notes provided; do not invent commitments</li>
+              <li>Output Format: 3-bullet summary, action table, open questions</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="review-process-panel">
+          <p class="panel-label">🧑 Required human review process</p>
+          <ol>
+            <li>Check that every action is grounded in the original notes.</li>
+            <li>Confirm owners and deadlines before distribution.</li>
+            <li>Remove or rewrite anything the AI inferred without evidence.</li>
+            <li>Approve only after a human reviewer confirms the draft is fit for use.</li>
+          </ol>
+        </article>
+      </section>
+
+      <section class="content-card" id="artefact">
+        <div class="section-heading">
+          <p class="section-kicker">Portfolio artefact</p>
+          <h2>AI Tool-Use Operating Checklist</h2>
+          <p>
+            Produce a one-page checklist that makes review depth and sign-off explicit before AI output is used in real work.
+          </p>
+        </div>
+
+        <div class="artefact-grid">
+          <article class="artefact-card">
+            <p class="panel-label">Checklist fields</p>
+            <ol>
+              <li>Task Type</li>
+              <li>Risk Level (Low / Medium / High)</li>
+              <li>AI Role (Drafting / Summarising / Analysis)</li>
+              <li>Required Human Verification</li>
+              <li>Final Decision Owner</li>
+              <li>Unknowns Flagged (Yes / No)</li>
+              <li>Safe-to-Share Status</li>
+            </ol>
+          </article>
+
+          <article class="artefact-card artefact-card-highlight">
+            <p class="panel-label">Why it matters</p>
+            <p>
+              This artefact is usable immediately in real work. It demonstrates not just prompting skill, but responsible AI operating discipline.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-card" id="reflection">
+        <div class="section-heading">
+          <p class="section-kicker">Reflection and further practice</p>
+          <h2>Close the module by making it concrete</h2>
+        </div>
+
+        <div class="reflection-grid">
+          <article class="reflection-card">
+            <p class="panel-label">Reflection questions</p>
+            <ul class="check-list compact">
+              <li>Where in your work are you currently treating AI as an authority?</li>
+              <li>Which outputs in your role require mandatory human review every time?</li>
+              <li>What task this week could be improved by structured prompts plus review checks?</li>
+            </ul>
+          </article>
+
+          <article class="reflection-card">
+            <p class="panel-label">Optional advanced exploration</p>
+            <ul class="check-list compact">
+              <li>Compare outputs from two AI tools using the same structured prompt.</li>
+              <li>Add risk levels and define review depth for each.</li>
+              <li>Test whether requiring “facts, assumptions, unknowns” reduces false confidence.</li>
+            </ul>
+          </article>
+
+          <article class="reflection-card">
+            <p class="panel-label">Suggested further practice</p>
+            <p>
+              Pick one recurring weekly task and build a repeatable AI draft-plus-review workflow. Run it once, record what failed, and update your checklist.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="t1m01_script.js"></script>
+</body>
+</html>
