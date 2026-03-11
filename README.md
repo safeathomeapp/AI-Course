@@ -49,36 +49,18 @@ Focus:
 
 ## Repository Structure
 
-```text
-AI-Course/
-│
-├── README.md
-├── PROJECT_CONTEXT.md
-├── COURSE_INDEX.md
-├── COURSE_PHILOSOPHY.md
-├── CONTRIBUTING.md
-│
-├── modules/
-│   ├── foundation/
-│   ├── applied/
-│   └── systems/
-│
-├── analysis/
-│   ├── foundation/
-│   ├── applied/
-│   └── systems/
-│
-├── reviews/
-│
-├── docs/
-│   ├── course_assets/
-│   ├── session_notes/
-│   └── (course design documents)
-│
-├── prompts/
-├── drafts/
-└── capstones/
-```
+Key folders:
+
+- `modules/` — source markdown modules
+- `learning/` — learner-facing HTML learning experiences
+- `analysis/` — review synthesis and revision planning
+- `reviews/` — raw reviewer feedback
+- `docs/` — architecture, templates, and course assets
+- `archive/` — historical module snapshots
+
+For a complete explanation of repository organization see:
+
+`REPOSITORY_MAP.md`
 
 ## Core Project Documents
 

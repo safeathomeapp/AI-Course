@@ -23,16 +23,16 @@ This ensures correct sorting and avoids numbering conflicts.
 
 ---
 
-## Repository Structure
+The repository is organized into functional layers:
 
-modules/
-	
-reviews/
-analysis/
-docs/
-docs/course_assets/
-    reusable teaching assets used across modules
-prompts/
-    prompt templates used during development
-drafts/
-    work-in-progress modules that are not part of the active course
+- `modules/` — source curriculum content
+- `learning/` — presentation layer for learner experiences
+- `analysis/` — review aggregation and revision planning
+- `reviews/` — raw reviewer feedback
+- `docs/` — architecture, templates, and shared teaching assets
+- `archive/` — historical module versions
+- `drafts/` — work-in-progress modules
+
+For the full repository layout and folder explanations see:
+
+`REPOSITORY_MAP.md`

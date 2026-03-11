@@ -220,42 +220,11 @@ fixed progression:
 
 ---
 
-# Repository Structure
+## Repository Structure
 
-The repository is organised as follows:
+A summary of the repository structure is provided in `REPOSITORY_MAP.md`.
 
-AI-Course/
-│
-├── README.md
-├── PROJECT_CONTEXT.md
-├── CONTRIBUTING.md
-├── prompts/PROMPT_LIBRARY.md
-│
-├── docs/
-│   ├── AI_COURSE_ARCHITECTURE.md
-│   ├── AI_COURSE_ROADMAP.md
-│   ├── AI_BEHAVIOUR_AND_USAGE_GUIDELINES.md
-│   ├── COURSE_MODULE_TEMPLATE.md
-│   ├── COURSE_CASE_STUDIES.md
-│   ├── COURSE_CURRICULUM_MAP.md
-│   ├── MODULE_SCAFFOLDER_TEMPLATE.md
-│   ├── CODEX_MODULE_GENERATION_GUIDE.md
-│   ├── TEST_PANEL_GUIDELINES.md
-│   ├── course_assets/
-│   └── session_notes/
-│
-├── modules/
-│   ├── foundation/
-│   ├── applied/
-│   └── systems/
-│
-├── prompts/
-├── capstones/
-├── analysis/
-├── reviews/
-└── drafts/
-
----
+Contributors should review that file before creating or modifying files.
 
 # Final Note
 

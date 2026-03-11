@@ -47,7 +47,7 @@ That statement sounds obvious, but in practice many people treat AI output like 
 
 Use this mental model whenever you work with AI:
 
-Prompt -> Context -> Generation -> Human Review -> Decision
+Prompt -> Context Window -> Probability Engine -> Output -> Human Review -> Decision
 
 Reference asset:
 
@@ -56,13 +56,13 @@ Reference asset:
 What this means in plain language:
 
 - Prompt: you provide instructions, goals, constraints, and format. See `docs/course_assets/AI_GLOSSARY.md`.
-- Context: the model can only work with what is in scope (your prompt plus available context). See `docs/course_assets/AI_GLOSSARY.md`.
-- Generation: the model produces a response by predicting likely next tokens based on patterns.
+- Context Window: the model can only use what is in scope (your prompt plus available context). See `docs/course_assets/AI_GLOSSARY.md`.
+- Probability Engine: the model predicts likely next tokens based on patterns.
 - Output: you get a response that can be useful, wrong, or mixed.
 - Human Review: you verify facts, assumptions, and fitness for purpose. See `docs/course_assets/AI_GLOSSARY.md`.
 - Decision: a person remains accountable for what is used. This is decision readiness, not automatic trust.
 
-If you skip the review step, you are effectively delegating authority to a generated draft. That is the exact behavior this module is designed to prevent.
+If you skip the review step, you are effectively delegating authority to a probability engine. That is the exact behavior this module is designed to prevent.
 
 ### Why hallucinations happen
 

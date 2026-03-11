@@ -1,5 +1,7 @@
 # AI_COURSE_ARCHITECTURE.md
 
+Repository organization is defined in `REPOSITORY_MAP.md`.
+
 ## Purpose
 
 Defines the structural architecture for course delivery, learner
@@ -63,3 +65,30 @@ The capstone is the integration point where learners demonstrate:
 - workflow design
 - verification and quality control
 - practical professional value
+
+## Future Enhancement: Module Metadata Schema
+
+As the course grows, it may become useful to introduce a structured metadata schema for modules.
+
+Possible metadata fields could include:
+
+* module_id
+* tier
+* estimated_duration
+* prerequisites
+* learning_objectives
+* assets_used
+* assessment_type
+
+A metadata schema would support future automation such as:
+
+* automatic course navigation generation
+* LMS export
+* module dependency mapping
+* learner progress tracking
+* automated learning page generation
+
+This schema is **not currently required** because modules are still being authored manually.
+
+If automation becomes necessary in the future, a `MODULE_METADATA_SCHEMA.md` document should be created in the `docs/` directory to define the structure.
+

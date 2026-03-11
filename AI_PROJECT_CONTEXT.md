@@ -147,6 +147,10 @@ drafts/
 docs/course_assets/
     shared teaching assets used across multiple modules
 	
+The authoritative repository map is defined in:
+
+REPOSITORY_MAP.md
+	
 ---
 
 # Development Workflow
