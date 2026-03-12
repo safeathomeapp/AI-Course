@@ -3,6 +3,8 @@
 ## Purpose
 Short, scannable weak-vs-improved prompt/output sets that make quality differences obvious.
 
+Use this file for concise side-by-side contrasts. Do not use it when the lesson needs the fuller explanation and teaching narration found in `docs/course_assets/AI_WORKED_EXAMPLES.md`.
+
 ---
 
 ## Comparison 1

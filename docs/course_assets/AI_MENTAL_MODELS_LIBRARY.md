@@ -15,6 +15,14 @@ They are used across multiple modules to:
 
 These models should be referenced rather than re-explained in every module.
 
+Use this file for conceptual frameworks. Do not use it as the primary source for glossary definitions, diagram specs, or full worked examples.
+
+Related files:
+
+- `docs/course_assets/AI_GLOSSARY.md`
+- `docs/course_assets/AI_DIAGRAM_LIBRARY.md`
+- `docs/course_assets/AI_WORKED_EXAMPLES.md`
+
 ---
 
 # Mental Model 1
@@ -95,6 +103,8 @@ Structured prompts:
 * reduce ambiguity
 * improve first-draft quality
 * reduce downstream editing
+
+This five-part structure should stay aligned with the terminology used in modules and in `docs/course_assets/AI_GLOSSARY.md`.
 
 ---
 

@@ -3,6 +3,13 @@
 ## Purpose
 Define diagram specifications that support Foundation modules. This file specifies what to draw and why; it does not include generated images.
 
+Use this file for visual specifications. Do not use it as the primary source for model definitions or long-form explanation.
+
+Related files:
+
+- `docs/course_assets/AI_MENTAL_MODELS_LIBRARY.md`
+- `docs/course_assets/AI_GLOSSARY.md`
+
 ---
 
 ## Diagram 1
@@ -33,7 +40,7 @@ AI output is an input to human judgment, not the final authority.
 
 ## Diagram 2
 ### Diagram Title
-Structured Prompt Anatomy (RCTCO)
+Five-Part Prompt Structure
 
 ### Module(s) Supported
 T1M01, T1M04
@@ -203,4 +210,4 @@ A prompt library is a maintained workflow asset, not a one-time checklist.
 ---
 
 ## Usage Note
-All diagrams should visually reinforce the same principle: AI drafts; humans review; humans decide.
+All diagrams should visually reinforce the same principle: AI drafts. Humans review. Humans decide.

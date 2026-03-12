@@ -2,234 +2,252 @@
 
 ## Purpose
 
-This file provides a **single entry point for the shared instructional assets used throughout the AI-Course repository**.
+This file is the entry point for the shared teaching asset library in `docs/course_assets/`.
 
-These assets support module development by providing **reusable teaching components** such as diagrams, exercises, worked examples, and conceptual models.
+Use this directory for reusable instructional material that supports modules, not for course policy, architecture, or repository governance. The authoritative module content still lives in `modules/`, and the course-level authority documents still live at the repository root and in `docs/`.
 
-The purpose of the asset library is to:
+The asset library exists to:
 
-* ensure consistency across modules
-* reduce duplication of teaching materials
-* provide reliable references for both human authors and AI tools
-* support controlled module revisions using shared instructional components
+- ensure consistency across modules
+- reduce duplication of teaching materials
+- provide reusable examples, models, diagrams, exercises, and artefact exemplars
+- give both human authors and AI tools a reliable reference layer for module support
 
-Modules should **reference these assets where appropriate rather than recreating similar material.**
+## Scope Boundary
 
----
+Use `docs/course_assets/` for:
 
-# Asset Library Structure
+- reusable teaching assets
+- shared examples
+- stable definitions
+- reusable exercise prompts
+- renderable diagram specifications
+- portfolio artefact exemplars
 
-All reusable teaching assets are stored in:
+Do not use `docs/course_assets/` to redefine:
 
-`docs/course_assets/`
+- course philosophy
+- repository structure
+- module template requirements
+- contributor workflow rules
 
-Each file in this directory represents a **specific category of instructional resource**.
+Those boundaries are defined in:
 
----
+- `COURSE_PHILOSOPHY.md`
+- `REPOSITORY_MAP.md`
+- `docs/AI_COURSE_ARCHITECTURE.md`
+- `docs/COURSE_MODULE_TEMPLATE.md`
 
-# Asset Files
+## Asset Library Structure
 
-## AI_ARTEFACT_EXAMPLES.md
+All files in this directory should have a clear reusable role inside the shared teaching asset layer. The library works best when each file has a distinct job and defers to neighboring files instead of duplicating them.
 
-### Purpose
+## Asset Files
 
-Provides examples of **portfolio artefacts** learners may produce during the course.
+### `AI_GLOSSARY.md`
 
-These demonstrate the difference between simple outputs and **structured professional artefacts**.
+Primary role:
 
-### Typical Uses
+- canonical term definitions for recurring AI vocabulary used in modules
 
-* Portfolio artefact section of modules
-* Demonstrating improved outputs
-* Teaching learners how to produce reusable work assets
+Use this file for:
 
-### Example Artefacts
+- definitions of terms such as prompt, context, hallucination, token, verification, and decision readiness
 
-* AI tool-use checklist
-* reliability control card
-* task-risk allocation matrix
-* prompt library entry
+Do not use this file for:
 
----
+- worked demonstrations
+- mental models
+- exercise design
 
-## AI_DIAGRAM_LIBRARY.md
+Related files:
 
-### Purpose
+- `AI_MENTAL_MODELS_LIBRARY.md`
+- `AI_WORKED_EXAMPLES.md`
 
-Defines the **standard diagrams used throughout the course**.
+### `AI_MENTAL_MODELS_LIBRARY.md`
 
-This file describes what each diagram should show and the key teaching point it supports.
+Primary role:
 
-### Typical Uses
+- canonical conceptual models used to teach safe and effective AI use
 
-* Visual explanation of concepts
-* Supporting demonstrations in modules
-* Instructor presentation material
+Use this file for:
 
-### Example Diagrams
+- workflow models
+- reasoning models
+- review-depth models
 
-* AI Workflow Model: Draft → Decision
-* Structured Prompt Anatomy
-* Weak vs Strong Prompt Flow
-* Task-Risk Allocation Grid
-* Reliability Check Loop
+Do not use this file for:
 
----
+- term definitions
+- diagram rendering specs
+- full worked demonstrations
 
-## AI_EXERCISE_LIBRARY.md
+Related files:
 
-### Purpose
+- `AI_GLOSSARY.md`
+- `AI_DIAGRAM_LIBRARY.md`
 
-Contains **reusable guided exercises** used across the course.
+### `AI_DIAGRAM_LIBRARY.md`
 
-Exercises are organized by difficulty level to support learner progression.
+Primary role:
 
-### Exercise Levels
+- specifications for diagrams that visualize approved course models
 
-* Beginner-Safe
-* Adaptation
-* Independent
+Use this file for:
 
-### Typical Uses
+- what a diagram should show
+- which module(s) it supports
+- the teaching point it reinforces
 
-* Guided exercise sections of modules
-* workshop activities
-* practice material for learners
+Do not use this file for:
 
----
+- replacing the underlying model explanation
+- long-form content writing
 
-## AI_WORKED_EXAMPLES.md
+Related files:
 
-### Purpose
+- `AI_MENTAL_MODELS_LIBRARY.md`
 
-Provides **complete worked examples** showing how structured prompting improves AI output quality.
+### `AI_WORKED_EXAMPLES.md`
 
-These examples include:
+Primary role:
 
-* weak prompt
-* improved prompt
-* output comparison
-* explanation of improvements
+- full demonstration-ready examples with weak prompt, improved prompt, outputs, and explanation
 
-### Typical Uses
+Use this file for:
 
-* Demonstrations in modules
-* instructor teaching material
-* examples of safe professional AI use
+- demonstration sections
+- instructor walkthroughs
+- module examples that need richer narrative explanation
 
----
+Do not use this file for:
 
-## AI_OUTPUT_COMPARISON_LIBRARY.md
+- short comparison snippets
+- glossary-style explanation
 
-### Purpose
+Related files:
 
-Contains **side-by-side comparisons of weak vs improved AI outputs**.
+- `AI_OUTPUT_COMPARISON_LIBRARY.md`
+- `AI_EXERCISE_LIBRARY.md`
 
-These comparisons highlight how prompt structure, constraints, and output formatting affect results.
+### `AI_OUTPUT_COMPARISON_LIBRARY.md`
 
-### Typical Uses
+Primary role:
 
-* demonstration sections
-* teaching prompt improvement
-* illustrating reliability and safety principles
+- short, scannable weak-vs-improved prompt/output comparisons
 
----
+Use this file for:
 
-## AI_GLOSSARY.md
+- side-by-side comparison blocks
+- quick demonstrations of prompt improvement
 
-### Purpose
+Do not use this file for:
 
-Provides **clear, beginner-safe definitions of key AI terminology** used throughout the course.
+- full worked-example walkthroughs
+- complete teaching scripts
 
-### Typical Uses
+Related files:
 
-* terminology reference for learners
-* consistent definitions across modules
-* support for new learners unfamiliar with AI vocabulary
+- `AI_WORKED_EXAMPLES.md`
 
-### Example Terms
+### `AI_EXERCISE_LIBRARY.md`
 
-* prompt
-* context
-* hallucination
-* token
-* structured prompt
-* verification
-* decision readiness
+Primary role:
 
----
+- reusable guided practice tasks
 
-## AI_MENTAL_MODELS_LIBRARY.md
+Use this file for:
 
-### Purpose
+- guided exercise sections
+- workshop activities
+- scaffolded learner practice
 
-Defines the **core conceptual models used to teach AI behaviour and safe usage**.
+Do not use this file for:
 
-Mental models help learners understand how to reason about AI systems in professional contexts.
+- glossary definitions
+- fully worked demonstrations
 
-### Typical Uses
+Related files:
 
-* concept explanation sections of modules
-* reinforcing key course principles
-* guiding learners in responsible AI use
+- `AI_WORKED_EXAMPLES.md`
+- `AI_OUTPUT_COMPARISON_LIBRARY.md`
 
-### Example Mental Models
+### `AI_ARTEFACT_EXAMPLES.md`
 
-* AI Workflow Model (Draft → Review → Decision)
-* Structured Prompting Model
-* Facts vs Inference vs Unknowns
-* Task Risk vs Review Depth
-* AI Strengths vs Human Strengths
-* Prompt Iteration Loop
+Primary role:
 
----
+- examples of portfolio artefacts learners can produce
 
-# How Assets Should Be Used
+Use this file for:
+
+- portfolio artefact sections
+- showing the difference between weak outputs and reusable professional artefacts
+
+Do not use this file for:
+
+- policy documents
+- governance standards
+
+Related files:
+
+- `AI_MENTAL_MODELS_LIBRARY.md`
+
+### `UX_CONTENT_MAPPING.md`
+
+Primary role:
+
+- implementation companion showing how approved teaching patterns map into shared UI components
+
+Use this file for:
+
+- translating teaching structure into the shared lesson UI
+- keeping component meaning consistent across modules
+
+Do not use this file for:
+
+- course philosophy
+- repository governance
+- replacing the module template
+
+## How Assets Should Be Used
 
 When developing or revising modules:
 
-1. **Prefer existing assets** from this library rather than creating new ones.
-2. **Reference assets where relevant** to maintain teaching consistency.
-3. Avoid duplicating examples already present in the library.
-4. If a new reusable asset is created, it should be **added to the appropriate library file**.
+1. Prefer existing assets from this library rather than creating duplicates.
+2. Reuse the primary file for the relevant task type.
+3. If files overlap, use the one with the narrower and more appropriate role.
+4. Add cross-references rather than repeating the same explanation in multiple files.
+5. If a new reusable asset is created, add it to the correct library file instead of scattering similar material across modules.
 
----
+## Relationship to Module Development
 
-# Relationship to Module Development
+These assets support module development. They do not replace module authorship in `modules/`.
 
-Shared assets are used during the **controlled revision process** to ensure consistent instructional quality.
-
-The mapping between modules and assets is defined in:
+The current asset-to-module planning reference is:
 
 `analysis/foundation/T1_FOUNDATION_ASSET_MAP.md`
 
-This mapping ensures:
+Use that file as planning support for Foundation modules, not as a replacement for the source curriculum in `modules/`.
 
-* appropriate asset selection for each module
-* balanced instructional design
-* progressive difficulty across modules
-
----
-
-# Guidance for AI Tools
+## Guidance for AI Tools
 
 AI assistants working in this repository should:
 
-* treat this directory as the **canonical source of reusable teaching assets**
-* reuse assets where appropriate instead of generating duplicates
-* maintain consistency with existing examples and terminology
-* avoid modifying asset files unless explicitly instructed
+- treat this directory as the reusable teaching asset layer
+- reuse approved assets where appropriate instead of generating duplicates
+- keep terminology and examples aligned with existing files
+- avoid turning asset files into policy or architecture documents
 
----
+## Summary
 
-# Summary
+`docs/course_assets/` should feel like one coherent support library:
 
-The asset library supports **consistent, reusable, and professional instructional design** across the AI-Course project.
-
-Using shared assets ensures that:
-
-* modules remain coherent
-* teaching examples remain aligned
-* learners encounter consistent conceptual frameworks
-
-These assets form a **core component of the course development system**.
+- glossary for terms
+- mental models for concepts
+- diagrams for visuals
+- worked examples for full demonstrations
+- comparison library for scannable contrasts
+- exercise library for practice
+- artefact examples for portfolio outputs
+- UX mapping for implementation consistency

@@ -17,23 +17,6 @@
   --warning-soft: rgba(217, 119, 6, 0.12);
   --shadow-soft: 0 14px 36px rgba(15, 23, 42, 0.07);
   --shadow-card: 0 24px 60px rgba(15, 23, 42, 0.08);
-  --shadow-sidebar: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-header: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-hero: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-content: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-callout: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-objective: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-panel: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-compare: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-example: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-exercise: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-scenario: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-review: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-artefact: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-reflection: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-definition: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-structure: 0 8px 12px rgba(15, 23, 42, 0.12);
-  --shadow-drawer: 0 8px 12px rgba(15, 23, 42, 0.12);
   --radius-sm: 12px;
   --radius-md: 18px;
   --radius-lg: 26px;
@@ -61,23 +44,6 @@ html[data-theme="dark"] {
   --warning-soft: rgba(245, 158, 11, 0.16);
   --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.28);
   --shadow-card: 0 28px 70px rgba(0, 0, 0, 0.34);
-  --shadow-sidebar: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-header: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-hero: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-content: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-callout: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-objective: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-panel: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-compare: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-example: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-exercise: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-scenario: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-review: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-artefact: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-reflection: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-definition: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-structure: 0 8px 14px rgba(0, 0, 0, 0.28);
-  --shadow-drawer: 0 8px 14px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -97,13 +63,6 @@ body {
     linear-gradient(180deg, var(--bg-elevated), var(--bg));
   color: var(--text);
   line-height: 1.6;
-}
-
-.shared-icon-sprite-defs {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
 }
 
 button,
@@ -159,7 +118,7 @@ pre {
   gap: 0.9rem;
   max-height: calc(100vh - 2rem);
   overflow: auto;
-  padding: 0.5rem 0.75rem 1rem 0.5rem;
+  padding-right: 0.2rem;
 }
 
 .sidebar-card,
@@ -181,14 +140,13 @@ pre {
 .exercise-drawer {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: var(--surface);
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
   box-shadow: var(--shadow-soft);
 }
 
 .sidebar-card {
   padding: 1rem;
   backdrop-filter: blur(14px);
-  box-shadow: var(--shadow-sidebar);
 }
 
 .eyebrow,
@@ -226,8 +184,7 @@ pre {
   width: 100%;
   height: 100%;
   display: block;
-  fill: none;
-  stroke: currentColor;
+  fill: currentColor;
 }
 
 .sidebar-section-head {
@@ -543,71 +500,13 @@ pre {
 .lesson-main {
   display: grid;
   gap: 1.2rem;
-  padding-bottom: 2rem;
 }
 
 .module-header,
 .hero-card,
 .content-card {
   padding: 1.5rem;
-}
-
-.module-header,
-.hero-card,
-.content-card {
-  box-shadow: none;
-}
-
-.callout {
-  box-shadow: var(--shadow-callout);
-}
-
-.objective-card {
-  box-shadow: var(--shadow-objective);
-}
-
-.panel {
-  box-shadow: var(--shadow-panel);
-}
-
-.compare-card {
-  box-shadow: var(--shadow-compare);
-}
-
-.example-card {
-  box-shadow: var(--shadow-example);
-}
-
-.exercise-card {
-  box-shadow: var(--shadow-exercise);
-}
-
-.scenario-card {
-  box-shadow: var(--shadow-scenario);
-}
-
-.review-process-panel {
-  box-shadow: var(--shadow-review);
-}
-
-.artefact-card {
-  box-shadow: var(--shadow-artefact);
-}
-
-.reflection-card {
-  box-shadow: var(--shadow-reflection);
-}
-
-.definition-card {
-  box-shadow: var(--shadow-definition);
-}
-
-.structure-item {
-  box-shadow: var(--shadow-structure);
-}
-
-.exercise-drawer {
-  box-shadow: var(--shadow-drawer);
+  box-shadow: var(--shadow-card);
 }
 
 [data-track-section] {
@@ -712,7 +611,6 @@ pre {
 :is(
   .hero-grid,
   .objective-strip,
-  .demo-panels,
   .two-column,
   .process-compare,
   .example-grid,
@@ -741,7 +639,6 @@ pre {
 :is(
   .hero-grid,
   .objective-strip,
-  .demo-panels,
   .two-column,
   .process-compare,
   .example-grid,
@@ -825,14 +722,6 @@ pre {
   display: grid;
   place-items: center;
   color: var(--text-strong);
-}
-
-.diagram-icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  fill: none;
-  stroke: currentColor;
 }
 
 .diagram-arrow {

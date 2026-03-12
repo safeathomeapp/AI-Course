@@ -23,8 +23,8 @@ function getThemeIcon(theme) {
   if (theme === 'dark') {
     return `
       <span class="ui-icon theme-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" focusable="false">
-          <use href="#icon-sun"></use>
+        <svg viewBox="0 0 20 20" focusable="false">
+          <path d="M10 3.3 11.2 6l2.8.3-2.1 1.9.6 2.8L10 9.6 7.5 11l.6-2.8L6 6.3 8.8 6 10 3.3Zm5.1 9.7.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6.6-1.5ZM4.3 12.5l.8 2 .8.3-.8.3-.8 2-.8-2-.8-.3.8-.3.8-2Z" fill="currentColor"/>
         </svg>
       </span>
     `;
@@ -32,8 +32,8 @@ function getThemeIcon(theme) {
 
   return `
     <span class="ui-icon theme-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" focusable="false">
-        <use href="#icon-moon"></use>
+      <svg viewBox="0 0 20 20" focusable="false">
+        <path d="M11.8 2.6a7.2 7.2 0 1 0 5.6 11.8A8 8 0 1 1 11.8 2.6Z" fill="currentColor"/>
       </svg>
     </span>
   `;

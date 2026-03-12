@@ -3,6 +3,13 @@
 ## Purpose
 Show practical examples of core Foundation artefacts and clarify what makes stronger artefacts more reliable and reusable.
 
+Use this file for portfolio artefact exemplars. Do not use it as a policy or governance document; the examples here show good artefact structure, not mandatory repository rules.
+
+Related files:
+
+- `docs/course_assets/AI_MENTAL_MODELS_LIBRARY.md`
+- `docs/course_assets/AI_WORKED_EXAMPLES.md`
+
 ---
 
 ## 1) AI Tool-Use Operating Checklist (T1M01)
@@ -134,4 +141,4 @@ Stronger artefacts share these traits:
 3. Clear ownership and approval boundaries
 4. Reuse and maintenance fields (version/last tested/review notes)
 
-These traits support the course principle: AI drafts; humans review; humans decide.
+These traits support the course principle: AI drafts. Humans review. Humans decide.

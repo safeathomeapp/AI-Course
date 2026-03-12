@@ -17,12 +17,7 @@
               <h2 class="sidebar-title">Course Shell</h2>
             </div>
             <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-              <span class="ui-icon theme-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <use href="#icon-moon"></use>
-                </svg>
-              </span>
-              <span class="theme-toggle-text">Dark mode</span>
+              🌙 Dark mode
             </button>
           </div>
 
@@ -36,19 +31,30 @@
           </div>
         </section>
 
-        <section class="sidebar-card sidebar-navigation">
-          <div class="sidebar-navigation-head">
-            <p class="eyebrow">T1M01</p>
-            <h2 class="sidebar-title">Introduction to AI as a Tool</h2>
+        <section class="sidebar-card sidebar-progress">
+          <div class="sidebar-section-head">
+            <div>
+              <p class="eyebrow">This Module</p>
+              <h2 class="sidebar-title">Progress</h2>
+            </div>
+            <span class="progress-percent" id="progressPercent">0%</span>
           </div>
 
-          <div class="module-progress">
-            <span class="progress-label">Module progress</span>
-            <div class="progress-track">
+          <div class="progress-shell">
+            <div class="progress-track" aria-hidden="true">
               <div class="progress-fill" id="progressFill"></div>
-              <span class="progress-percent" id="progressPercent">0%</span>
             </div>
+            <p class="progress-copy" id="progressText">Viewed 0 of 8 lesson sections.</p>
           </div>
+
+          <div class="progress-actions">
+            <button id="markCompleteButton" class="primary-button" type="button">Mark complete</button>
+            <a id="nextModuleButton" class="secondary-link locked" href="#" aria-disabled="true">Next module locked</a>
+          </div>
+        </section>
+
+        <section class="sidebar-card sidebar-sections">
+          <p class="eyebrow">On This Page</p>
           <nav class="section-nav" aria-label="Module section navigation">
             <a class="section-link active" href="#overview">Overview</a>
             <a class="section-link" href="#mental-model">Mental model</a>
@@ -60,12 +66,85 @@
             <a class="section-link" href="#reflection">Reflection</a>
           </nav>
         </section>
+
+        <section class="sidebar-card sidebar-path">
+          <div class="sidebar-section-head">
+            <div>
+              <p class="eyebrow">Module Path</p>
+              <h2 class="sidebar-title">Foundation Tier</h2>
+            </div>
+            <span class="path-meta">1 / 10</span>
+          </div>
+
+          <nav class="module-path-grid" aria-label="Foundation module path">
+            <a class="path-chip active" href="#overview" aria-current="page" data-module="T1M01">
+              <span class="path-chip-code">T1M01</span>
+              <span class="path-chip-title">Intro to AI</span>
+              <span class="path-chip-state">Current</span>
+            </a>
+            <a class="path-chip available" id="pathChipT1M02" href="#" data-module="T1M02" aria-disabled="true">
+              <span class="path-chip-code">T1M02</span>
+              <span class="path-chip-title">How LLMs Work</span>
+              <span class="path-chip-state">Next</span>
+            </a>
+            <button class="path-chip locked" type="button" data-module="T1M03" disabled>
+              <span class="path-chip-code">T1M03</span>
+              <span class="path-chip-title">Strengths & Limits</span>
+              <span class="path-chip-state">Locked</span>
+            </button>
+            <button class="path-chip locked" type="button" data-module="T1M04" disabled>
+              <span class="path-chip-code">T1M04</span>
+              <span class="path-chip-title">Structured Prompting</span>
+              <span class="path-chip-state">Locked</span>
+            </button>
+            <button class="path-chip locked" type="button" data-module="T1M05" disabled>
+              <span class="path-chip-code">T1M05</span>
+              <span class="path-chip-title">Output Structure</span>
+              <span class="path-chip-state">Locked</span>
+            </button>
+            <button class="path-chip locked" type="button" data-module="T1M06" disabled>
+              <span class="path-chip-code">T1M06</span>
+              <span class="path-chip-title">AI for Research</span>
+              <span class="path-chip-state">Locked</span>
+            </button>
+            <button class="path-chip locked" type="button" data-module="T1M07" disabled>
+              <span class="path-chip-code">T1M07</span>
+              <span class="path-chip-title">Thinking Partner</span>
+              <span class="path-chip-state">Locked</span>
+            </button>
+            <button class="path-chip locked" type="button" data-module="T1M08" disabled>
+              <span class="path-chip-code">T1M08</span>
+              <span class="path-chip-title">Common Mistakes</span>
+              <span class="path-chip-state">Locked</span>
+            </button>
+            <button class="path-chip locked" type="button" data-module="T1M09" disabled>
+              <span class="path-chip-code">T1M09</span>
+              <span class="path-chip-title">First Workflow</span>
+              <span class="path-chip-state">Locked</span>
+            </button>
+            <button class="path-chip locked" type="button" data-module="T1M10" disabled>
+              <span class="path-chip-code">T1M10</span>
+              <span class="path-chip-title">Portfolio Project</span>
+              <span class="path-chip-state">Locked</span>
+            </button>
+          </nav>
+        </section>
       </div>
     </aside>
 
     <main class="lesson-main">
       <header class="module-header">
-        <h1>Introduction to AI as a Tool</h1>
+        <div class="module-header-meta">
+          <span class="module-tier-pill">Foundations</span>
+          <span class="module-code-pill">T1M01</span>
+        </div>
+        <div class="module-header-main">
+          <div>
+            <p class="module-header-kicker">Module header</p>
+            <h1>Introduction to AI as a Tool</h1>
+          </div>
+          <span class="status-pill current" id="moduleStatusPill">In progress</span>
+        </div>
       </header>
 
       <section class="hero-card" id="overview" data-track-section>
@@ -80,14 +159,7 @@
 
         <div class="hero-grid">
           <article class="callout callout-key">
-            <p class="callout-label label-with-icon">
-              <span class="ui-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <use href="#icon-lightbulb"></use>
-                </svg>
-              </span>
-              Core operating rule
-            </p>
+            <p class="callout-label">Core operating rule</p>
             <h3>Use AI for drafting support, not for automatic trust.</h3>
             <p>
               Fluent output can still be unsupported, incomplete, or wrong. Review is a required step, especially when an output will affect decisions or downstream work.
@@ -95,14 +167,7 @@
           </article>
 
           <article class="callout callout-warning">
-            <p class="callout-label label-with-icon">
-              <span class="ui-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <use href="#icon-alert-triangle"></use>
-                </svg>
-              </span>
-              Why beginners get caught out
-            </p>
+            <p class="callout-label">Why beginners get caught out</p>
             <h3>Fluency is helpful, but fluency is not evidence.</h3>
             <p>
               Models can produce convincing language even when the facts are missing, assumptions are hidden, or the prompt is under-specified.
@@ -137,47 +202,27 @@
 
         <div class="concept-diagram" aria-label="Human and AI workflow model">
           <div class="diagram-step human">
-            <span class="diagram-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <use href="#icon-file-text"></use>
-              </svg>
-            </span>
+            <span class="diagram-icon" aria-hidden="true">1</span>
             <span class="diagram-label">Prompt</span>
           </div>
           <div class="diagram-arrow" aria-hidden="true">→</div>
           <div class="diagram-step human">
-            <span class="diagram-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <use href="#icon-copy"></use>
-              </svg>
-            </span>
+            <span class="diagram-icon" aria-hidden="true">2</span>
             <span class="diagram-label">Context</span>
           </div>
           <div class="diagram-arrow" aria-hidden="true">→</div>
           <div class="diagram-step ai">
-            <span class="diagram-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <use href="#icon-bot"></use>
-              </svg>
-            </span>
+            <span class="diagram-icon" aria-hidden="true">3</span>
             <span class="diagram-label">Generation</span>
           </div>
           <div class="diagram-arrow" aria-hidden="true">→</div>
           <div class="diagram-step human">
-            <span class="diagram-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <use href="#icon-user"></use>
-              </svg>
-            </span>
+            <span class="diagram-icon" aria-hidden="true">4</span>
             <span class="diagram-label">Human Review</span>
           </div>
           <div class="diagram-arrow" aria-hidden="true">→</div>
           <div class="diagram-step human decision">
-            <span class="diagram-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <use href="#icon-circle-check"></use>
-              </svg>
-            </span>
+            <span class="diagram-icon" aria-hidden="true">5</span>
             <span class="diagram-label">Decision</span>
           </div>
         </div>
@@ -195,14 +240,7 @@
           </article>
 
           <article class="definition-card definition-card-highlight">
-            <p class="panel-label label-with-icon">
-              <span class="ui-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <use href="#icon-lightbulb"></use>
-                </svg>
-              </span>
-              Key rule
-            </p>
+            <p class="panel-label">Key rule</p>
             <h3>If you skip review, you are delegating authority to a generated draft.</h3>
             <p>
               That is the exact behaviour this module is designed to prevent.
@@ -214,11 +252,7 @@
           <article class="panel">
             <p class="panel-label">Why hallucinations happen</p>
             <p>
-              If a prompt is under-specified, or the required facts are not present in context, the model may still produce a smooth answer by filling gaps with likely language. That can look convincing even when it is unsupported and can lead to a
-              <span class="term" data-definition="The term used when an AI generates information that sounds plausible but is fabricated because the model does not actually know the correct answer.">
-                hallucination
-                <span class="term-help" tabindex="0" role="button" aria-label="Show definition for hallucination">?</span>
-              </span>.
+              If a prompt is under-specified, or the required facts are not present in context, the model may still produce a smooth answer by filling gaps with likely language. That can look convincing even when it is unsupported.
             </p>
           </article>
 
@@ -307,28 +341,16 @@
             <div class="example-grid two-up">
               <article class="example-card weak">
                 <p class="example-label">Weak prompt</p>
-                <div class="prompt-block">
-                  <div class="block-label">Prompt</div>
-                  <pre>Summarize these notes.</pre>
-                </div>
-                <div class="result-block">
-                  <div class="block-label">Result</div>
-                  <p>Likely result: a generic narrative summary with hidden unknowns and no clear action structure.</p>
-                </div>
+                <pre>Summarize these notes.</pre>
+                <p>Likely result: a generic narrative summary with hidden unknowns and no clear action structure.</p>
               </article>
               <article class="example-card improved">
                 <p class="example-label">Improved prompt</p>
-                <div class="prompt-block">
-                  <div class="block-label">Prompt</div>
-                  <pre>You are a project coordinator.
+                <pre>You are a project coordinator.
 Convert these notes into an action log.
 Use columns: Action, Owner, Deadline, Status.
 Mark unknowns as Unassigned.</pre>
-                </div>
-                <div class="result-block">
-                  <div class="block-label">Result</div>
-                  <p>Likely result: a usable structure, explicit unknowns, and less downstream rework during review.</p>
-                </div>
+                <p>Likely result: a usable structure, explicit unknowns, and less downstream rework during review.</p>
               </article>
             </div>
           </section>
@@ -337,29 +359,17 @@ Mark unknowns as Unassigned.</pre>
             <div class="example-grid two-up">
               <article class="example-card weak">
                 <p class="example-label">Weak prompt</p>
-                <div class="prompt-block">
-                  <div class="block-label">Prompt</div>
-                  <pre>Summarize this meeting.</pre>
-                </div>
-                <div class="result-block">
-                  <div class="block-label">Result</div>
-                  <p>Likely result: missing owners, missing deadlines, and hidden handoff issues.</p>
-                </div>
+                <pre>Summarize this meeting.</pre>
+                <p>Likely result: missing owners, missing deadlines, and hidden handoff issues.</p>
               </article>
               <article class="example-card improved">
                 <p class="example-label">Improved prompt</p>
-                <div class="prompt-block">
-                  <div class="block-label">Prompt</div>
-                  <pre>Role: Project coordination assistant
+                <pre>Role: Project coordination assistant
 Context: Weekly internal meeting notes covering onboarding delays and handoff issues
 Task: Convert notes into a review-ready action brief
 Constraints: Use only the notes provided; do not invent commitments; mark unknown owners and deadlines as Unassigned
 Output Format: 3-bullet summary, action table, open questions</pre>
-                </div>
-                <div class="result-block">
-                  <div class="block-label">Result</div>
-                  <p>Likely result: clearer follow-up actions, explicit unknowns, and faster decision readiness.</p>
-                </div>
+                <p>Likely result: clearer follow-up actions, explicit unknowns, and faster decision readiness.</p>
               </article>
             </div>
           </section>
@@ -368,29 +378,17 @@ Output Format: 3-bullet summary, action table, open questions</pre>
             <div class="example-grid two-up">
               <article class="example-card weak">
                 <p class="example-label">Weak prompt</p>
-                <div class="prompt-block">
-                  <div class="block-label">Prompt</div>
-                  <pre>Summarize these KPI notes.</pre>
-                </div>
-                <div class="result-block">
-                  <div class="block-label">Result</div>
-                  <p>Likely result: a smooth summary that may blur confirmed facts, assumptions, and missing figures.</p>
-                </div>
+                <pre>Summarize these KPI notes.</pre>
+                <p>Likely result: a smooth summary that may blur confirmed facts, assumptions, and missing figures.</p>
               </article>
               <article class="example-card improved">
                 <p class="example-label">Improved prompt</p>
-                <div class="prompt-block">
-                  <div class="block-label">Prompt</div>
-                  <pre>Role: Finance analyst assistant
+                <pre>Role: Finance analyst assistant
 Context: KPI notes from the monthly performance review
 Task: Turn the notes into a fact / unknown summary for management review
 Constraints: Separate confirmed figures from assumptions; do not infer missing numbers; flag review questions explicitly
 Output Format: Confirmed facts, Unknowns, Risks, Review questions</pre>
-                </div>
-                <div class="result-block">
-                  <div class="block-label">Result</div>
-                  <p>Likely result: facts are separated from gaps, and missing information becomes reviewable instead of hidden.</p>
-                </div>
+                <p>Likely result: facts are separated from gaps, and missing information becomes reviewable instead of hidden.</p>
               </article>
             </div>
           </section>
@@ -399,33 +397,22 @@ Output Format: Confirmed facts, Unknowns, Risks, Review questions</pre>
             <div class="example-grid two-up">
               <article class="example-card weak">
                 <p class="example-label">Weak prompt</p>
-                <div class="prompt-block">
-                  <div class="block-label">Prompt</div>
-                  <pre>Write a follow-up email after this meeting.</pre>
-                </div>
-                <div class="result-block">
-                  <div class="block-label">Result</div>
-                  <p>Likely result: a generic email that may invent ownership or sound more certain than the meeting notes support.</p>
-                </div>
+                <pre>Write a follow-up email after this meeting.</pre>
+                <p>Likely result: a generic email that may invent ownership or sound more certain than the meeting notes support.</p>
               </article>
               <article class="example-card improved">
                 <p class="example-label">Improved prompt</p>
-                <div class="prompt-block">
-                  <div class="block-label">Prompt</div>
-                  <pre>Role: Administrative assistant
+                <pre>Role: Administrative assistant
 Context: This is a follow-up email after an internal project meeting about onboarding delays
 Task: Draft a clear follow-up email with actions and next steps
 Constraints: Do not invent owners or deadlines; mark missing details as unknown
 Output Format: Subject line, email body, action list, open questions</pre>
-                </div>
-                <div class="result-block">
-                  <div class="block-label">Result</div>
-                  <p>Likely result: clearer communication, explicit unknowns, and an easier line-by-line review before sending.</p>
-                </div>
+                <p>Likely result: clearer communication, explicit unknowns, and an easier line-by-line review before sending.</p>
               </article>
             </div>
           </section>
         </div>
+
         <article class="callout callout-neutral">
           <p class="callout-label">Why the improved version is better</p>
           <ul class="check-list compact">
@@ -540,6 +527,7 @@ Output Format:"></textarea>
             </ul>
           </article>
         </div>
+
         <article class="review-process-panel">
           <p class="panel-label">Required human review process</p>
           <ol>
@@ -616,24 +604,9 @@ Output Format:"></textarea>
           </article>
         </div>
       </section>
-
-      <section class="content-card module-end-card" aria-label="Module next steps">
-        <div class="section-heading">
-          <p class="section-kicker">Module complete</p>
-          <h2>Next steps</h2>
-          <p>Use this space to move forward once you have finished the module and reviewed your notes.</p>
-        </div>
-
-        <div class="module-end-actions">
-          <a class="secondary-link" href="USER_LANDING.html">Go to user page</a>
-          <a id="endContinueButton" class="secondary-link locked" href="#" aria-disabled="true">Continue to T1M02</a>
-          <button class="secondary-button" type="button">Save notes placeholder</button>
-          <button class="secondary-button" type="button">Leave feedback placeholder</button>
-        </div>
-      </section>
     </main>
   </div>
-  <script src="js/shared_icon_sprite.js" data-shared-icon-sprite></script>
+
   <script src="t1m01_script.js"></script>
 </body>
 </html>

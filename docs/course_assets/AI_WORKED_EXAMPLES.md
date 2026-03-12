@@ -3,6 +3,8 @@
 ## Purpose
 Complete worked examples that show how structured prompting improves output quality and safety.
 
+Use this file for full demonstration blocks with context, outputs, and explanation. For shorter side-by-side snippets, defer to `docs/course_assets/AI_OUTPUT_COMPARISON_LIBRARY.md`.
+
 ---
 
 ## Worked Example 1: Admin / Coordination

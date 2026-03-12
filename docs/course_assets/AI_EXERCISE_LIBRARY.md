@@ -3,6 +3,14 @@
 ## Purpose
 Reusable exercises across T1M01-T1M04 with beginner-safe entry points and increasing independence.
 
+Use this file for practice tasks and scaffolds. Do not use it as the primary source for worked demonstrations or term definitions.
+
+Related files:
+
+- `docs/course_assets/AI_WORKED_EXAMPLES.md`
+- `docs/course_assets/AI_OUTPUT_COMPARISON_LIBRARY.md`
+- `docs/course_assets/AI_GLOSSARY.md`
+
 ---
 
 ## A. Beginner-Safe Exercises (5)
@@ -11,7 +19,7 @@ Reusable exercises across T1M01-T1M04 with beginner-safe entry points and increa
 Beginner-Safe
 
 Task
-Rewrite a vague email-drafting prompt using RCTCO.
+Rewrite a vague email-drafting prompt using the five-part prompt structure: Role, Context, Task, Constraints, Output Format.
 
 Prompt Starter
 "You are an administrative assistant..."
@@ -289,4 +297,4 @@ Add a peer review and capture feedback in revision notes.
 - If you already use structured prompts, use Independent for deeper transfer.
 
 ## Core Reminder
-AI drafts. Humans verify. Humans decide.
+AI drafts. Humans review. Humans decide.
